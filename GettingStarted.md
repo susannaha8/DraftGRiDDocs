@@ -2,7 +2,7 @@
 
 GRiD is 
 
-## GRiD Setup
+## Set Up GRiD
 
 ### SSH into a Machine with a GPU
 
