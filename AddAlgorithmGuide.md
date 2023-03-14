@@ -1,8 +1,8 @@
 # How to Add an Algorithm to GRiD: Overview (current structure)
 
 ## Create the Files
-
-In GRiD/GRiDCodeGenerator/algorithms, create a new file of the form _alg_name.py. In algorithms/__init_.py, add 'from ._alg_name import *`.
+_
+In GRiD/GRiDCodeGenerator/algorithms, create a new file of the form \_alg_name.py. In algorithms/\_\_init_.py, add `from ._alg_name import *`.
 
 
 ## Implement the Methods
