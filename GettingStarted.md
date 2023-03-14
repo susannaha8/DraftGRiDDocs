@@ -2,15 +2,15 @@
 
 GRiD is 
 
-## Set up GRiD
+## GRiD Setup
 
 ### SSH into a Machine with a GPU
 
-### Install Dependencies 
+### Install GRiD Dependencies 
 
 ### Git
 
-### GRiD File Structure
+## GRiD File Structure
 
 ## What is CUDA C++?
 
