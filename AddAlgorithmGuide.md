@@ -15,7 +15,7 @@ Each algorithm consists of 8 methods. Below is a list of the methods, what they 
 
 `gen_alg_device(self, use_thread_group = False, use_qdd_input = False)`
 
-`gen_alg_kernel`
+`def gen_alg_kernel(self, use_thread_group = False, use_qdd_input = False, single_call_timing = False)`: creates the needed [   ] . For a given algorithm, change the name of the algorithm, inputs/ result in the function template, shared_mem values, and any other instances of inputs/result shared memory values .. 
 
 `gen_idsva_host`
 
