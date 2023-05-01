@@ -1,4 +1,4 @@
-# How to Add an Algorithm to GRiD: Overview (current structure)
+# How to Add an Algorithm to GRiD: Overview
 
 ## Create the Files
 _
