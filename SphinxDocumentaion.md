@@ -12,9 +12,9 @@ Create a folder to house your documentation. Most projects will have an addition
 
 Example folder structure: \
 |-my_project \
-\emsp |-docs \
-\emsp|-project \
-\emsp|-README.md
+    |-docs \
+    |-project \
+    |-README.md
 
 If the project has subfolders, each subfolder must have an `__init__.py` file. 
 
