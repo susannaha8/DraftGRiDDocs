@@ -10,11 +10,11 @@ To replicate what was done for this first draft of GRiD docs (link), follow alon
 
 Create a folder to house your documentation. Most projects will have an additional folder that contains both the empty folder for documentation along with the project itself, but the project is specified with a path so this isn't essential.
 
-Example folder structure:
-|-my_project
-  |-docs
-  |-project
-  |-README.md
+Example folder structure: \
+|-my_project \
+  |-docs \
+  |-project \
+  |-README.md \
 
 If the project has subfolders, each subfolder must have an `__init__.py` file. 
 
