@@ -31,6 +31,10 @@ Set the project name and other information, and select `y` for build and source 
 
 ## Build the HTML Page
 
+`sphinx-apidoc -f -M --separate -t=./source/_templates  -o ./source ../GRiD`
+
+`make html`
+
 ## Push to github pages
 
 # Writing Docstrings
