@@ -1,6 +1,6 @@
 # Generating Python Documentation with Sphinx
 
-Sphinx is software that autogenerates documentation for a python codebase based on the strings inside the files. I created a draft of Sphinx documentation for GRiD inside this repository (in the folder `/grid_draft_docs3`. To replicate what was done for this first draft of GRiD docs, follow along below. To add to my draft with function/class descriptions, Use the existing .rst files in this repository and skip to "Writing Docstrings". 
+Sphinx is software that autogenerates documentation for a python codebase based on the strings inside the files. I created a draft of Sphinx documentation for GRiD inside this repository (in the folder `/grid_draft_docs3`). To replicate what was done for this first draft of GRiD docs, follow along below. To add to my draft with function/class descriptions, Use the existing .rst files in this repository and skip to "Writing Docstrings". 
 
 instructions modified from https://sphinx-rtd-tutorial.readthedocs.io/en/latest/index.html
 
@@ -24,7 +24,7 @@ If the project has subfolders, each subfolder needs an `__init__.py` file.
 ## Initialize and Configure a Sphinx Project
 
 ### Initialization
-Use '$ cd' to move into your empty documentation folder (in the example, `/docs`). Run `$ sphinx-quickstart`. 
+Use `$ cd` to move into your empty documentation folder (in the example, `/docs`). Run `$ sphinx-quickstart`. 
 
 Set the project name and other information, and select `y` for build and source being separate. 
 
@@ -35,9 +35,13 @@ Sphinx has a variety of themes (https://sphinx-themes.org/). To use the "ReadThe
 
 #### Path
 To set the path to your code base, add the following lines to the top of your `conf.py` file:
+
 `import os`
+
 `import sys`
+
 `sys.path.insert(0, os.path.abspath('../../GRiD'))`
+
 
 If you put your project folder somewhere different than in the example, adjust the path to that folder accordingly. 
 
