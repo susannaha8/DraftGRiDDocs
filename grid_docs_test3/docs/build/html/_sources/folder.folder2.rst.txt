@@ -1,0 +1,14 @@
+folder.folder2
+==============
+
+.. automodule:: folder.folder2
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+
+
+.. toctree::
+   :maxdepth: 4
+
+   folder.folder2.cat

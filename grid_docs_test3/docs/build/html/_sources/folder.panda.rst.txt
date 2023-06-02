@@ -1,0 +1,7 @@
+folder.panda
+------------
+
+.. automodule:: folder.panda
+   :members:
+   :undoc-members:
+   :show-inheritance:

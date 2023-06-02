@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GRiDCodeGenerator.GRiDCodeGenerator &mdash; GRiD  documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/sphinx_highlight.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="RBDReference" href="RBDReference.html" />
+    <link rel="prev" title="GRiDCodeGenerator.helpers" href="GRiDCodeGenerator.helpers.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            GRiD
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">GRiD</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="GRiDCodeGenerator.html">GRiDCodeGenerator</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="GRiDCodeGenerator.algorithms.html">GRiDCodeGenerator.algorithms</a></li>
+<li class="toctree-l3"><a class="reference internal" href="GRiDCodeGenerator.helpers.html">GRiDCodeGenerator.helpers</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">GRiDCodeGenerator.GRiDCodeGenerator</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator"><code class="docutils literal notranslate"><span class="pre">GRiDCodeGenerator</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="RBDReference.html">RBDReference</a></li>
+<li class="toctree-l2"><a class="reference internal" href="URDFParser.html">URDFParser</a></li>
+<li class="toctree-l2"><a class="reference internal" href="generateGRiD.html">generateGRiD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="printGRiD.html">printGRiD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="printReferenceValues.html">printReferenceValues</a></li>
+<li class="toctree-l2"><a class="reference internal" href="testGRiDRefactorings.html">testGRiDRefactorings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="util.html">util</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">GRiD</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="modules.html">GRiD</a></li>
+          <li class="breadcrumb-item"><a href="GRiDCodeGenerator.html">GRiDCodeGenerator</a></li>
+      <li class="breadcrumb-item active">GRiDCodeGenerator.GRiDCodeGenerator</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/GRiDCodeGenerator.GRiDCodeGenerator.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-GRiDCodeGenerator.GRiDCodeGenerator">
+<span id="gridcodegenerator-gridcodegenerator"></span><h1>GRiDCodeGenerator.GRiDCodeGenerator<a class="headerlink" href="#module-GRiDCodeGenerator.GRiDCodeGenerator" title="Permalink to this heading"></a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">GRiDCodeGenerator.GRiDCodeGenerator.</span></span><span class="sig-name descname"><span class="pre">GRiDCodeGenerator</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">robotObj</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">DEBUG_MODE</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">NEED_PRINT_MAT</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">USE_DYNAMIC_SHARED_MEM</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">FILE_NAMESPACE</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'grid'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.fx">
+<span class="sig-name descname"><span class="pre">fx</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">vec</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.fx" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.fxS">
+<span class="sig-name descname"><span class="pre">fxS</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">S</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">vec</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">alpha</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.fxS" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.fxv">
+<span class="sig-name descname"><span class="pre">fxv</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fxVec</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timesVec</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.fxv" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.gen_XImats_helpers_temp_shared_memory_code">
+<span class="sig-name descname"><span class="pre">gen_XImats_helpers_temp_shared_memory_code</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">temp_mem_size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.gen_XImats_helpers_temp_shared_memory_code" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.gen_add_code_line">
+<span class="sig-name descname"><span class="pre">gen_add_code_line</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">new_code_line</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">add_indent_after</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.gen_add_code_line" title="Permalink to this definition"></a></dt>
+<dd><p>add a single line of CUDA C++ code to the grid.cuh file</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>new_code_line</strong> (<em>string</em>) – python string of C++ code to add</p></li>
+<li><p><strong>add_indent_after</strong> (<em>bool</em><em>, </em><em>optional</em>) – set to true if code line is the beginning of a block and requires the subsequent line to be indented (ex. if(){ ), defaults to False</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.gen_add_code_lines">
+<span class="sig-name descname"><span class="pre">gen_add_code_lines</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">new_code_lines</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">add_indent_after</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.gen_add_code_lines" title="Permalink to this definition"></a></dt>
+<dd><p>add multiple lines of CUDA C++ code to the grid.cuh file</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>new_code_lines</strong> (<em>string</em>) – multi-line python string of C++ code to add</p></li>
+<li><p><strong>add_indent_after</strong> (<em>bool</em><em>, </em><em>optional</em>) – set to true if the last code line is the beginning of a block and requires the subsequent line to be indented (ex. if(){ ), defaults to False</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.gen_add_constants_helpers">
+<span class="sig-name descname"><span class="pre">gen_add_constants_helpers</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.gen_add_constants_helpers" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.gen_add_end_control_flow">
+<span class="sig-name descname"><span class="pre">gen_add_end_control_flow</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.gen_add_end_control_flow" title="Permalink to this definition"></a></dt>
+<dd><p>used at the end of a block of code; adds a closing bracket and unindents</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.gen_add_end_function">
+<span class="sig-name descname"><span class="pre">gen_add_end_function</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.gen_add_end_function" title="Permalink to this definition"></a></dt>
+<dd><p>used at the end of a function; adds a closing bracket, unindents, and adds a newline</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.gen_add_func_doc">
+<span class="sig-name descname"><span class="pre">gen_add_func_doc</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">func_desc</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">notes</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">params</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">return_val</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.gen_add_func_doc" title="Permalink to this definition"></a></dt>
+<dd><p>adds inputted description of a function in C++ in the grid.cuh file</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>func_desc</strong> (<em>_type_</em>) – _description_</p></li>
+<li><p><strong>notes</strong> (<em>list</em><em>, </em><em>optional</em>) – _description_, defaults to []</p></li>
+<li><p><strong>params</strong> (<em>list</em><em>, </em><em>optional</em>) – _description_, defaults to []</p></li>
+<li><p><strong>return_val</strong> (<em>_type_</em><em>, </em><em>optional</em>) – _description_, defaults to None</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.gen_add_gpu_err">
+<span class="sig-name descname"><span class="pre">gen_add_gpu_err</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.gen_add_gpu_err" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.gen_add_includes">
+<span class="sig-name descname"><span class="pre">gen_add_includes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">use_thread_group</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.gen_add_includes" title="Permalink to this definition"></a></dt>
+<dd><p>_summary_</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>use_thread_group</strong> (<em>bool</em><em>, </em><em>optional</em>) – _description_, defaults to False</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.gen_add_multi_threaded_select">
+<span class="sig-name descname"><span class="pre">gen_add_multi_threaded_select</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">loop_counter</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">comparator</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">counts</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">select_tuples</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">USE_NON_BRANCH_ALWAYS</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.gen_add_multi_threaded_select" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.gen_add_parallel_loop">
+<span class="sig-name descname"><span class="pre">gen_add_parallel_loop</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">var_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_val</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">use_thread_group</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">block_level</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.gen_add_parallel_loop" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.gen_add_serial_ops">
+<span class="sig-name descname"><span class="pre">gen_add_serial_ops</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">use_thread_group</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.gen_add_serial_ops" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.gen_add_sync">
+<span class="sig-name descname"><span class="pre">gen_add_sync</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">use_thread_group</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.gen_add_sync" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.gen_all_code">
+<span class="sig-name descname"><span class="pre">gen_all_code</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">use_thread_group</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">include_base_inertia</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.gen_all_code" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.gen_direct_minv">
+<span class="sig-name descname"><span class="pre">gen_direct_minv</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">use_thread_group</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.gen_direct_minv" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.gen_direct_minv_device">
+<span class="sig-name descname"><span class="pre">gen_direct_minv_device</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">use_thread_group</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.gen_direct_minv_device" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.gen_direct_minv_host">
+<span class="sig-name descname"><span class="pre">gen_direct_minv_host</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mode</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.gen_direct_minv_host" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.gen_direct_minv_inner">
+<span class="sig-name descname"><span class="pre">gen_direct_minv_inner</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">use_thread_group</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.gen_direct_minv_inner" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.gen_direct_minv_inner_function_call">
+<span class="sig-name descname"><span class="pre">gen_direct_minv_inner_function_call</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">use_thread_group</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">updated_var_names</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.gen_direct_minv_inner_function_call" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.gen_direct_minv_inner_temp_mem_size">
+<span class="sig-name descname"><span class="pre">gen_direct_minv_inner_temp_mem_size</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.gen_direct_minv_inner_temp_mem_size" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.gen_direct_minv_kernel">
+<span class="sig-name descname"><span class="pre">gen_direct_minv_kernel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">use_thread_group</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">single_call_timing</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.gen_direct_minv_kernel" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.gen_forward_dynamics">
+<span class="sig-name descname"><span class="pre">gen_forward_dynamics</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">use_thread_group</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.gen_forward_dynamics" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.gen_forward_dynamics_device">
+<span class="sig-name descname"><span class="pre">gen_forward_dynamics_device</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">use_thread_group</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.gen_forward_dynamics_device" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.gen_forward_dynamics_finish">
+<span class="sig-name descname"><span class="pre">gen_forward_dynamics_finish</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">use_thread_group</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.gen_forward_dynamics_finish" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.gen_forward_dynamics_finish_function_call">
+<span class="sig-name descname"><span class="pre">gen_forward_dynamics_finish_function_call</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">use_thread_group</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">updated_var_names</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.gen_forward_dynamics_finish_function_call" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.gen_forward_dynamics_gradient">
+<span class="sig-name descname"><span class="pre">gen_forward_dynamics_gradient</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">use_thread_group</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.gen_forward_dynamics_gradient" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.gen_forward_dynamics_gradient_device">
+<span class="sig-name descname"><span class="pre">gen_forward_dynamics_gradient_device</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">use_thread_group</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">use_qdd_Minv_input</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.gen_forward_dynamics_gradient_device" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.gen_forward_dynamics_gradient_host">
+<span class="sig-name descname"><span class="pre">gen_forward_dynamics_gradient_host</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mode</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.gen_forward_dynamics_gradient_host" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.gen_forward_dynamics_gradient_inner_python">
+<span class="sig-name descname"><span class="pre">gen_forward_dynamics_gradient_inner_python</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">use_thread_group</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">use_qdd_Minv_input</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">s_df_du_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'s_df_du'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.gen_forward_dynamics_gradient_inner_python" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.gen_forward_dynamics_gradient_inner_temp_mem_size">
+<span class="sig-name descname"><span class="pre">gen_forward_dynamics_gradient_inner_temp_mem_size</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">use_qdd_Minv_input</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.gen_forward_dynamics_gradient_inner_temp_mem_size" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.gen_forward_dynamics_gradient_kernel">
+<span class="sig-name descname"><span class="pre">gen_forward_dynamics_gradient_kernel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">use_thread_group</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">use_qdd_Minv_input</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">single_call_timing</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.gen_forward_dynamics_gradient_kernel" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.gen_forward_dynamics_gradient_kernel_max_temp_mem_size">
+<span class="sig-name descname"><span class="pre">gen_forward_dynamics_gradient_kernel_max_temp_mem_size</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.gen_forward_dynamics_gradient_kernel_max_temp_mem_size" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.gen_forward_dynamics_host">
+<span class="sig-name descname"><span class="pre">gen_forward_dynamics_host</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mode</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.gen_forward_dynamics_host" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.gen_forward_dynamics_inner">
+<span class="sig-name descname"><span class="pre">gen_forward_dynamics_inner</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">use_thread_group</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.gen_forward_dynamics_inner" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.gen_forward_dynamics_inner_function_call">
+<span class="sig-name descname"><span class="pre">gen_forward_dynamics_inner_function_call</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">use_thread_group</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">updated_var_names</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.gen_forward_dynamics_inner_function_call" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.gen_forward_dynamics_inner_temp_mem_size">
+<span class="sig-name descname"><span class="pre">gen_forward_dynamics_inner_temp_mem_size</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.gen_forward_dynamics_inner_temp_mem_size" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.gen_forward_dynamics_kernel">
+<span class="sig-name descname"><span class="pre">gen_forward_dynamics_kernel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">use_thread_group</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">single_call_timing</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.gen_forward_dynamics_kernel" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.gen_init_XImats">
+<span class="sig-name descname"><span class="pre">gen_init_XImats</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">include_base_inertia</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.gen_init_XImats" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.gen_init_close_grid">
+<span class="sig-name descname"><span class="pre">gen_init_close_grid</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.gen_init_close_grid" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.gen_init_gridData">
+<span class="sig-name descname"><span class="pre">gen_init_gridData</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.gen_init_gridData" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.gen_init_robotModel">
+<span class="sig-name descname"><span class="pre">gen_init_robotModel</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.gen_init_robotModel" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.gen_init_topology_helpers">
+<span class="sig-name descname"><span class="pre">gen_init_topology_helpers</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.gen_init_topology_helpers" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.gen_insert_helpers_func_def_params">
+<span class="sig-name descname"><span class="pre">gen_insert_helpers_func_def_params</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">func_def</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">func_params</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">param_insert_position</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">updated_var_names</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.gen_insert_helpers_func_def_params" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.gen_insert_helpers_function_call">
+<span class="sig-name descname"><span class="pre">gen_insert_helpers_function_call</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">updated_var_names</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.gen_insert_helpers_function_call" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.gen_inverse_dynamics">
+<span class="sig-name descname"><span class="pre">gen_inverse_dynamics</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">use_thread_group</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.gen_inverse_dynamics" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.gen_inverse_dynamics_device">
+<span class="sig-name descname"><span class="pre">gen_inverse_dynamics_device</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">use_thread_group</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">compute_c</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">use_qdd_input</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.gen_inverse_dynamics_device" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.gen_inverse_dynamics_device_temp_mem_size">
+<span class="sig-name descname"><span class="pre">gen_inverse_dynamics_device_temp_mem_size</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">compute_c</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.gen_inverse_dynamics_device_temp_mem_size" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.gen_inverse_dynamics_gradient">
+<span class="sig-name descname"><span class="pre">gen_inverse_dynamics_gradient</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">use_thread_group</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.gen_inverse_dynamics_gradient" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.gen_inverse_dynamics_gradient_device">
+<span class="sig-name descname"><span class="pre">gen_inverse_dynamics_gradient_device</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">use_thread_group</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">use_qdd_input</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.gen_inverse_dynamics_gradient_device" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.gen_inverse_dynamics_gradient_host">
+<span class="sig-name descname"><span class="pre">gen_inverse_dynamics_gradient_host</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mode</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.gen_inverse_dynamics_gradient_host" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.gen_inverse_dynamics_gradient_inner">
+<span class="sig-name descname"><span class="pre">gen_inverse_dynamics_gradient_inner</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">use_thread_group</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.gen_inverse_dynamics_gradient_inner" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.gen_inverse_dynamics_gradient_inner_function_call">
+<span class="sig-name descname"><span class="pre">gen_inverse_dynamics_gradient_inner_function_call</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">use_thread_group</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">updated_var_names</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.gen_inverse_dynamics_gradient_inner_function_call" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.gen_inverse_dynamics_gradient_inner_temp_mem_size">
+<span class="sig-name descname"><span class="pre">gen_inverse_dynamics_gradient_inner_temp_mem_size</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.gen_inverse_dynamics_gradient_inner_temp_mem_size" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.gen_inverse_dynamics_gradient_kernel">
+<span class="sig-name descname"><span class="pre">gen_inverse_dynamics_gradient_kernel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">use_thread_group</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">use_qdd_input</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">single_call_timing</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.gen_inverse_dynamics_gradient_kernel" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.gen_inverse_dynamics_gradient_kernel_max_temp_mem_size">
+<span class="sig-name descname"><span class="pre">gen_inverse_dynamics_gradient_kernel_max_temp_mem_size</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.gen_inverse_dynamics_gradient_kernel_max_temp_mem_size" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.gen_inverse_dynamics_host">
+<span class="sig-name descname"><span class="pre">gen_inverse_dynamics_host</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mode</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.gen_inverse_dynamics_host" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.gen_inverse_dynamics_inner">
+<span class="sig-name descname"><span class="pre">gen_inverse_dynamics_inner</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">use_thread_group</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">compute_c</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">use_qdd_input</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.gen_inverse_dynamics_inner" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.gen_inverse_dynamics_inner_function_call">
+<span class="sig-name descname"><span class="pre">gen_inverse_dynamics_inner_function_call</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">use_thread_group</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">compute_c</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">use_qdd_input</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">updated_var_names</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.gen_inverse_dynamics_inner_function_call" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.gen_inverse_dynamics_inner_temp_mem_size">
+<span class="sig-name descname"><span class="pre">gen_inverse_dynamics_inner_temp_mem_size</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.gen_inverse_dynamics_inner_temp_mem_size" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.gen_inverse_dynamics_kernel">
+<span class="sig-name descname"><span class="pre">gen_inverse_dynamics_kernel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">use_thread_group</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">use_qdd_input</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">single_call_timing</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.gen_inverse_dynamics_kernel" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.gen_kernel_load_inputs">
+<span class="sig-name descname"><span class="pre">gen_kernel_load_inputs</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stride</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">amount</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">use_thread_group</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name2</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stride2</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">amount2</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name3</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stride3</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">amount3</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.gen_kernel_load_inputs" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.gen_kernel_load_inputs_single_timing">
+<span class="sig-name descname"><span class="pre">gen_kernel_load_inputs_single_timing</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">amount</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">use_thread_group</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name2</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">amount2</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name3</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">amount3</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.gen_kernel_load_inputs_single_timing" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.gen_kernel_save_result">
+<span class="sig-name descname"><span class="pre">gen_kernel_save_result</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">store_to_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stride</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">amount</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">use_thread_group</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">load_from_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.gen_kernel_save_result" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.gen_kernel_save_result_single_timing">
+<span class="sig-name descname"><span class="pre">gen_kernel_save_result_single_timing</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">store_to_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">amount</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">use_thread_group</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">load_from_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.gen_kernel_save_result_single_timing" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.gen_load_update_XImats_helpers">
+<span class="sig-name descname"><span class="pre">gen_load_update_XImats_helpers</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">use_thread_group</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.gen_load_update_XImats_helpers" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.gen_load_update_XImats_helpers_function_call">
+<span class="sig-name descname"><span class="pre">gen_load_update_XImats_helpers_function_call</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">use_thread_group</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">updated_var_names</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.gen_load_update_XImats_helpers_function_call" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.gen_load_update_XImats_helpers_temp_mem_size">
+<span class="sig-name descname"><span class="pre">gen_load_update_XImats_helpers_temp_mem_size</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.gen_load_update_XImats_helpers_temp_mem_size" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.gen_mx_func_call_for_cpp">
+<span class="sig-name descname"><span class="pre">gen_mx_func_call_for_cpp</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">inds</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">PEQ_FLAG</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">SCALE_FLAG</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">updated_var_names</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.gen_mx_func_call_for_cpp" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.gen_spatial_algebra_helpers">
+<span class="sig-name descname"><span class="pre">gen_spatial_algebra_helpers</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.gen_spatial_algebra_helpers" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.gen_static_array_ind_2d">
+<span class="sig-name descname"><span class="pre">gen_static_array_ind_2d</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">col</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">row</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">col_stride</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">6</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.gen_static_array_ind_2d" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.gen_static_array_ind_3d">
+<span class="sig-name descname"><span class="pre">gen_static_array_ind_3d</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ind</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">col</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">row</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ind_stride</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">36</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">col_stride</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">6</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.gen_static_array_ind_3d" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.gen_topology_helpers_pointers_for_cpp">
+<span class="sig-name descname"><span class="pre">gen_topology_helpers_pointers_for_cpp</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">inds</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">updated_var_names</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">NO_GRAD_FLAG</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.gen_topology_helpers_pointers_for_cpp" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.gen_topology_helpers_size">
+<span class="sig-name descname"><span class="pre">gen_topology_helpers_size</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.gen_topology_helpers_size" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.gen_topology_sparsity_helpers_python">
+<span class="sig-name descname"><span class="pre">gen_topology_sparsity_helpers_python</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">INIT_MODE</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.gen_topology_sparsity_helpers_python" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.gen_var_in_list">
+<span class="sig-name descname"><span class="pre">gen_var_in_list</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">var_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">option_list</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.gen_var_in_list" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.gen_var_not_in_list">
+<span class="sig-name descname"><span class="pre">gen_var_not_in_list</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">var_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">option_list</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.gen_var_not_in_list" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.mx">
+<span class="sig-name descname"><span class="pre">mx</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">vec</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.mx" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.mx0">
+<span class="sig-name descname"><span class="pre">mx0</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">vec</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">alpha</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.mx0" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.mx1">
+<span class="sig-name descname"><span class="pre">mx1</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">vec</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">alpha</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.mx1" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.mx2">
+<span class="sig-name descname"><span class="pre">mx2</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">vec</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">alpha</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.mx2" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.mx3">
+<span class="sig-name descname"><span class="pre">mx3</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">vec</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">alpha</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.mx3" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.mx4">
+<span class="sig-name descname"><span class="pre">mx4</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">vec</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">alpha</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.mx4" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.mx5">
+<span class="sig-name descname"><span class="pre">mx5</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">vec</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">alpha</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.mx5" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.mxS">
+<span class="sig-name descname"><span class="pre">mxS</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">S</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">vec</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">alpha</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.mxS" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.mxv">
+<span class="sig-name descname"><span class="pre">mxv</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fxVec</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timesVec</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.mxv" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.test_densify_Minv">
+<span class="sig-name descname"><span class="pre">test_densify_Minv</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">Minv</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.test_densify_Minv" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.test_fd_grad">
+<span class="sig-name descname"><span class="pre">test_fd_grad</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">q</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qd</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">u</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">GRAVITY</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-9.81</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.test_fd_grad" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.test_minv">
+<span class="sig-name descname"><span class="pre">test_minv</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">q</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">output_dense</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.test_minv" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.test_minv_bpass">
+<span class="sig-name descname"><span class="pre">test_minv_bpass</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">q</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.test_minv_bpass" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.test_minv_fpass">
+<span class="sig-name descname"><span class="pre">test_minv_fpass</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">q</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Minv</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">F</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">U</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Dinv</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.test_minv_fpass" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.test_rnea">
+<span class="sig-name descname"><span class="pre">test_rnea</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">q</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qd</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qdd</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">GRAVITY</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-9.81</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.test_rnea" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.test_rnea_bpass">
+<span class="sig-name descname"><span class="pre">test_rnea_bpass</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">q</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qd</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">f</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.test_rnea_bpass" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.test_rnea_fpass">
+<span class="sig-name descname"><span class="pre">test_rnea_fpass</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">q</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qd</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qdd</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">GRAVITY</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-9.81</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.test_rnea_fpass" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.test_rnea_grad">
+<span class="sig-name descname"><span class="pre">test_rnea_grad</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">q</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qd</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qdd</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">GRAVITY</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-9.81</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.test_rnea_grad" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.test_rnea_grad_inner">
+<span class="sig-name descname"><span class="pre">test_rnea_grad_inner</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">q</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qd</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">v</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">a</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">f</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">GRAVITY</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-9.81</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.test_rnea_grad_inner" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="GRiDCodeGenerator.helpers.html" class="btn btn-neutral float-left" title="GRiDCodeGenerator.helpers" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="RBDReference.html" class="btn btn-neutral float-right" title="RBDReference" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

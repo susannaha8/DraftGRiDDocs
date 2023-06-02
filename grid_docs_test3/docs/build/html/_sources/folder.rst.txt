@@ -1,0 +1,21 @@
+folder
+======
+
+.. automodule:: folder
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+
+
+.. toctree::
+   :maxdepth: 4
+
+   folder.folder2
+
+
+
+.. toctree::
+   :maxdepth: 4
+
+   folder.panda

@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>URDFParser &mdash; GRiD  documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/sphinx_highlight.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="URDFParser.InertiaSet" href="URDFParser.InertiaSet.html" />
+    <link rel="prev" title="RBDReference.RBDReference" href="RBDReference.RBDReference.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            GRiD
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">GRiD</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="GRiDCodeGenerator.html">GRiDCodeGenerator</a></li>
+<li class="toctree-l2"><a class="reference internal" href="RBDReference.html">RBDReference</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">URDFParser</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="URDFParser.InertiaSet.html">URDFParser.InertiaSet</a></li>
+<li class="toctree-l3"><a class="reference internal" href="URDFParser.Joint.html">URDFParser.Joint</a></li>
+<li class="toctree-l3"><a class="reference internal" href="URDFParser.Link.html">URDFParser.Link</a></li>
+<li class="toctree-l3"><a class="reference internal" href="URDFParser.Robot.html">URDFParser.Robot</a></li>
+<li class="toctree-l3"><a class="reference internal" href="URDFParser.SpatialAlgebra.html">URDFParser.SpatialAlgebra</a></li>
+<li class="toctree-l3"><a class="reference internal" href="URDFParser.URDFParser.html">URDFParser.URDFParser</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="generateGRiD.html">generateGRiD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="printGRiD.html">printGRiD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="printReferenceValues.html">printReferenceValues</a></li>
+<li class="toctree-l2"><a class="reference internal" href="testGRiDRefactorings.html">testGRiDRefactorings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="util.html">util</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">GRiD</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="modules.html">GRiD</a></li>
+      <li class="breadcrumb-item active">URDFParser</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/URDFParser.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-URDFParser">
+<span id="urdfparser"></span><h1>URDFParser<a class="headerlink" href="#module-URDFParser" title="Permalink to this heading"></a></h1>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="URDFParser.InertiaSet.html">URDFParser.InertiaSet</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="URDFParser.InertiaSet.html#URDFParser.InertiaSet.InertiaSet"><code class="docutils literal notranslate"><span class="pre">InertiaSet</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="URDFParser.InertiaSet.html#URDFParser.InertiaSet.InertiaSet.is_zero"><code class="docutils literal notranslate"><span class="pre">InertiaSet.is_zero()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="URDFParser.InertiaSet.html#URDFParser.InertiaSet.InertiaSet.to_matrix"><code class="docutils literal notranslate"><span class="pre">InertiaSet.to_matrix()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="URDFParser.InertiaSet.html#URDFParser.InertiaSet.InertiaSet.to_vector"><code class="docutils literal notranslate"><span class="pre">InertiaSet.to_vector()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="URDFParser.Joint.html">URDFParser.Joint</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="URDFParser.Joint.html#URDFParser.Joint.Joint"><code class="docutils literal notranslate"><span class="pre">Joint</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="URDFParser.Joint.html#URDFParser.Joint.Joint.get_bfs_id"><code class="docutils literal notranslate"><span class="pre">Joint.get_bfs_id()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="URDFParser.Joint.html#URDFParser.Joint.Joint.get_bfs_level"><code class="docutils literal notranslate"><span class="pre">Joint.get_bfs_level()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="URDFParser.Joint.html#URDFParser.Joint.Joint.get_child"><code class="docutils literal notranslate"><span class="pre">Joint.get_child()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="URDFParser.Joint.html#URDFParser.Joint.Joint.get_damping"><code class="docutils literal notranslate"><span class="pre">Joint.get_damping()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="URDFParser.Joint.html#URDFParser.Joint.Joint.get_id"><code class="docutils literal notranslate"><span class="pre">Joint.get_id()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="URDFParser.Joint.html#URDFParser.Joint.Joint.get_joint_subspace"><code class="docutils literal notranslate"><span class="pre">Joint.get_joint_subspace()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="URDFParser.Joint.html#URDFParser.Joint.Joint.get_name"><code class="docutils literal notranslate"><span class="pre">Joint.get_name()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="URDFParser.Joint.html#URDFParser.Joint.Joint.get_parent"><code class="docutils literal notranslate"><span class="pre">Joint.get_parent()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="URDFParser.Joint.html#URDFParser.Joint.Joint.get_transformation_matrix"><code class="docutils literal notranslate"><span class="pre">Joint.get_transformation_matrix()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="URDFParser.Joint.html#URDFParser.Joint.Joint.get_transformation_matrix_function"><code class="docutils literal notranslate"><span class="pre">Joint.get_transformation_matrix_function()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="URDFParser.Joint.html#URDFParser.Joint.Joint.set_bfs_id"><code class="docutils literal notranslate"><span class="pre">Joint.set_bfs_id()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="URDFParser.Joint.html#URDFParser.Joint.Joint.set_bfs_level"><code class="docutils literal notranslate"><span class="pre">Joint.set_bfs_level()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="URDFParser.Joint.html#URDFParser.Joint.Joint.set_child"><code class="docutils literal notranslate"><span class="pre">Joint.set_child()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="URDFParser.Joint.html#URDFParser.Joint.Joint.set_damping"><code class="docutils literal notranslate"><span class="pre">Joint.set_damping()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="URDFParser.Joint.html#URDFParser.Joint.Joint.set_id"><code class="docutils literal notranslate"><span class="pre">Joint.set_id()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="URDFParser.Joint.html#URDFParser.Joint.Joint.set_origin_rpy"><code class="docutils literal notranslate"><span class="pre">Joint.set_origin_rpy()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="URDFParser.Joint.html#URDFParser.Joint.Joint.set_origin_xyz"><code class="docutils literal notranslate"><span class="pre">Joint.set_origin_xyz()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="URDFParser.Joint.html#URDFParser.Joint.Joint.set_parent"><code class="docutils literal notranslate"><span class="pre">Joint.set_parent()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="URDFParser.Joint.html#URDFParser.Joint.Joint.set_transformation_matrix"><code class="docutils literal notranslate"><span class="pre">Joint.set_transformation_matrix()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="URDFParser.Joint.html#URDFParser.Joint.Joint.set_type"><code class="docutils literal notranslate"><span class="pre">Joint.set_type()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="URDFParser.Link.html">URDFParser.Link</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="URDFParser.Link.html#URDFParser.Link.Link"><code class="docutils literal notranslate"><span class="pre">Link</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="URDFParser.Link.html#URDFParser.Link.Link.build_spatial_inertia"><code class="docutils literal notranslate"><span class="pre">Link.build_spatial_inertia()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="URDFParser.Link.html#URDFParser.Link.Link.get_bfs_id"><code class="docutils literal notranslate"><span class="pre">Link.get_bfs_id()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="URDFParser.Link.html#URDFParser.Link.Link.get_bfs_level"><code class="docutils literal notranslate"><span class="pre">Link.get_bfs_level()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="URDFParser.Link.html#URDFParser.Link.Link.get_id"><code class="docutils literal notranslate"><span class="pre">Link.get_id()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="URDFParser.Link.html#URDFParser.Link.Link.get_name"><code class="docutils literal notranslate"><span class="pre">Link.get_name()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="URDFParser.Link.html#URDFParser.Link.Link.get_parent_id"><code class="docutils literal notranslate"><span class="pre">Link.get_parent_id()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="URDFParser.Link.html#URDFParser.Link.Link.get_spatial_inertia"><code class="docutils literal notranslate"><span class="pre">Link.get_spatial_inertia()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="URDFParser.Link.html#URDFParser.Link.Link.get_subtree"><code class="docutils literal notranslate"><span class="pre">Link.get_subtree()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="URDFParser.Link.html#URDFParser.Link.Link.is_world_base_frame"><code class="docutils literal notranslate"><span class="pre">Link.is_world_base_frame()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="URDFParser.Link.html#URDFParser.Link.Link.set_bfs_id"><code class="docutils literal notranslate"><span class="pre">Link.set_bfs_id()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="URDFParser.Link.html#URDFParser.Link.Link.set_bfs_level"><code class="docutils literal notranslate"><span class="pre">Link.set_bfs_level()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="URDFParser.Link.html#URDFParser.Link.Link.set_id"><code class="docutils literal notranslate"><span class="pre">Link.set_id()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="URDFParser.Link.html#URDFParser.Link.Link.set_inertia"><code class="docutils literal notranslate"><span class="pre">Link.set_inertia()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="URDFParser.Link.html#URDFParser.Link.Link.set_origin_rpy"><code class="docutils literal notranslate"><span class="pre">Link.set_origin_rpy()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="URDFParser.Link.html#URDFParser.Link.Link.set_origin_xyz"><code class="docutils literal notranslate"><span class="pre">Link.set_origin_xyz()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="URDFParser.Link.html#URDFParser.Link.Link.set_parent_id"><code class="docutils literal notranslate"><span class="pre">Link.set_parent_id()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="URDFParser.Link.html#URDFParser.Link.Link.set_spatial_inertia"><code class="docutils literal notranslate"><span class="pre">Link.set_spatial_inertia()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="URDFParser.Link.html#URDFParser.Link.Link.set_subtree"><code class="docutils literal notranslate"><span class="pre">Link.set_subtree()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="URDFParser.Robot.html">URDFParser.Robot</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="URDFParser.Robot.html#URDFParser.Robot.Robot"><code class="docutils literal notranslate"><span class="pre">Robot</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="URDFParser.Robot.html#URDFParser.Robot.Robot.add_joint"><code class="docutils literal notranslate"><span class="pre">Robot.add_joint()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="URDFParser.Robot.html#URDFParser.Robot.Robot.add_link"><code class="docutils literal notranslate"><span class="pre">Robot.add_link()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="URDFParser.Robot.html#URDFParser.Robot.Robot.are_Ss_identical"><code class="docutils literal notranslate"><span class="pre">Robot.are_Ss_identical()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="URDFParser.Robot.html#URDFParser.Robot.Robot.get_Imat_by_id"><code class="docutils literal notranslate"><span class="pre">Robot.get_Imat_by_id()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="URDFParser.Robot.html#URDFParser.Robot.Robot.get_Imat_by_name"><code class="docutils literal notranslate"><span class="pre">Robot.get_Imat_by_name()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="URDFParser.Robot.html#URDFParser.Robot.Robot.get_Imats_by_bfs_level"><code class="docutils literal notranslate"><span class="pre">Robot.get_Imats_by_bfs_level()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="URDFParser.Robot.html#URDFParser.Robot.Robot.get_Imats_dict_by_id"><code class="docutils literal notranslate"><span class="pre">Robot.get_Imats_dict_by_id()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="URDFParser.Robot.html#URDFParser.Robot.Robot.get_Imats_dict_by_name"><code class="docutils literal notranslate"><span class="pre">Robot.get_Imats_dict_by_name()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="URDFParser.Robot.html#URDFParser.Robot.Robot.get_Imats_ordered_by_id"><code class="docutils literal notranslate"><span class="pre">Robot.get_Imats_ordered_by_id()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="URDFParser.Robot.html#URDFParser.Robot.Robot.get_Imats_ordered_by_name"><code class="docutils literal notranslate"><span class="pre">Robot.get_Imats_ordered_by_name()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="URDFParser.Robot.html#URDFParser.Robot.Robot.get_S_by_bfs_level"><code class="docutils literal notranslate"><span class="pre">Robot.get_S_by_bfs_level()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="URDFParser.Robot.html#URDFParser.Robot.Robot.get_S_by_id"><code class="docutils literal notranslate"><span class="pre">Robot.get_S_by_id()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="URDFParser.Robot.html#URDFParser.Robot.Robot.get_S_by_name"><code class="docutils literal notranslate"><span class="pre">Robot.get_S_by_name()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="URDFParser.Robot.html#URDFParser.Robot.Robot.get_Ss_dict_by_id"><code class="docutils literal notranslate"><span class="pre">Robot.get_Ss_dict_by_id()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="URDFParser.Robot.html#URDFParser.Robot.Robot.get_Ss_dict_by_name"><code class="docutils literal notranslate"><span class="pre">Robot.get_Ss_dict_by_name()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="URDFParser.Robot.html#URDFParser.Robot.Robot.get_Ss_ordered_by_id"><code class="docutils literal notranslate"><span class="pre">Robot.get_Ss_ordered_by_id()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="URDFParser.Robot.html#URDFParser.Robot.Robot.get_Ss_ordered_by_name"><code class="docutils literal notranslate"><span class="pre">Robot.get_Ss_ordered_by_name()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="URDFParser.Robot.html#URDFParser.Robot.Robot.get_Xmat_Func_by_id"><code class="docutils literal notranslate"><span class="pre">Robot.get_Xmat_Func_by_id()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="URDFParser.Robot.html#URDFParser.Robot.Robot.get_Xmat_Func_by_name"><code class="docutils literal notranslate"><span class="pre">Robot.get_Xmat_Func_by_name()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="URDFParser.Robot.html#URDFParser.Robot.Robot.get_Xmat_Funcs_by_bfs_level"><code class="docutils literal notranslate"><span class="pre">Robot.get_Xmat_Funcs_by_bfs_level()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="URDFParser.Robot.html#URDFParser.Robot.Robot.get_Xmat_Funcs_dict_by_id"><code class="docutils literal notranslate"><span class="pre">Robot.get_Xmat_Funcs_dict_by_id()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="URDFParser.Robot.html#URDFParser.Robot.Robot.get_Xmat_Funcs_dict_by_name"><code class="docutils literal notranslate"><span class="pre">Robot.get_Xmat_Funcs_dict_by_name()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="URDFParser.Robot.html#URDFParser.Robot.Robot.get_Xmat_Funcs_ordered_by_id"><code class="docutils literal notranslate"><span class="pre">Robot.get_Xmat_Funcs_ordered_by_id()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="URDFParser.Robot.html#URDFParser.Robot.Robot.get_Xmat_Funcs_ordered_by_name"><code class="docutils literal notranslate"><span class="pre">Robot.get_Xmat_Funcs_ordered_by_name()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="URDFParser.Robot.html#URDFParser.Robot.Robot.get_Xmat_by_id"><code class="docutils literal notranslate"><span class="pre">Robot.get_Xmat_by_id()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="URDFParser.Robot.html#URDFParser.Robot.Robot.get_Xmat_by_name"><code class="docutils literal notranslate"><span class="pre">Robot.get_Xmat_by_name()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="URDFParser.Robot.html#URDFParser.Robot.Robot.get_Xmats_by_bfs_level"><code class="docutils literal notranslate"><span class="pre">Robot.get_Xmats_by_bfs_level()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="URDFParser.Robot.html#URDFParser.Robot.Robot.get_Xmats_dict_by_id"><code class="docutils literal notranslate"><span class="pre">Robot.get_Xmats_dict_by_id()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="URDFParser.Robot.html#URDFParser.Robot.Robot.get_Xmats_dict_by_name"><code class="docutils literal notranslate"><span class="pre">Robot.get_Xmats_dict_by_name()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="URDFParser.Robot.html#URDFParser.Robot.Robot.get_Xmats_ordered_by_id"><code class="docutils literal notranslate"><span class="pre">Robot.get_Xmats_ordered_by_id()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="URDFParser.Robot.html#URDFParser.Robot.Robot.get_Xmats_ordered_by_name"><code class="docutils literal notranslate"><span class="pre">Robot.get_Xmats_ordered_by_name()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="URDFParser.Robot.html#URDFParser.Robot.Robot.get_ancestors_by_id"><code class="docutils literal notranslate"><span class="pre">Robot.get_ancestors_by_id()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="URDFParser.Robot.html#URDFParser.Robot.Robot.get_bfs_level_by_id"><code class="docutils literal notranslate"><span class="pre">Robot.get_bfs_level_by_id()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="URDFParser.Robot.html#URDFParser.Robot.Robot.get_damping_by_id"><code class="docutils literal notranslate"><span class="pre">Robot.get_damping_by_id()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="URDFParser.Robot.html#URDFParser.Robot.Robot.get_ids_by_bfs_level"><code class="docutils literal notranslate"><span class="pre">Robot.get_ids_by_bfs_level()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="URDFParser.Robot.html#URDFParser.Robot.Robot.get_is_ancestor_of"><code class="docutils literal notranslate"><span class="pre">Robot.get_is_ancestor_of()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="URDFParser.Robot.html#URDFParser.Robot.Robot.get_is_in_subtree_of"><code class="docutils literal notranslate"><span class="pre">Robot.get_is_in_subtree_of()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="URDFParser.Robot.html#URDFParser.Robot.Robot.get_joint_by_id"><code class="docutils literal notranslate"><span class="pre">Robot.get_joint_by_id()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="URDFParser.Robot.html#URDFParser.Robot.Robot.get_joint_by_name"><code class="docutils literal notranslate"><span class="pre">Robot.get_joint_by_name()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="URDFParser.Robot.html#URDFParser.Robot.Robot.get_joint_by_parent_child_name"><code class="docutils literal notranslate"><span class="pre">Robot.get_joint_by_parent_child_name()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="URDFParser.Robot.html#URDFParser.Robot.Robot.get_joints_by_bfs_level"><code class="docutils literal notranslate"><span class="pre">Robot.get_joints_by_bfs_level()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="URDFParser.Robot.html#URDFParser.Robot.Robot.get_joints_by_child_name"><code class="docutils literal notranslate"><span class="pre">Robot.get_joints_by_child_name()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="URDFParser.Robot.html#URDFParser.Robot.Robot.get_joints_by_parent_name"><code class="docutils literal notranslate"><span class="pre">Robot.get_joints_by_parent_name()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="URDFParser.Robot.html#URDFParser.Robot.Robot.get_joints_dict_by_id"><code class="docutils literal notranslate"><span class="pre">Robot.get_joints_dict_by_id()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="URDFParser.Robot.html#URDFParser.Robot.Robot.get_joints_dict_by_name"><code class="docutils literal notranslate"><span class="pre">Robot.get_joints_dict_by_name()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="URDFParser.Robot.html#URDFParser.Robot.Robot.get_joints_ordered_by_id"><code class="docutils literal notranslate"><span class="pre">Robot.get_joints_ordered_by_id()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="URDFParser.Robot.html#URDFParser.Robot.Robot.get_joints_ordered_by_name"><code class="docutils literal notranslate"><span class="pre">Robot.get_joints_ordered_by_name()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="URDFParser.Robot.html#URDFParser.Robot.Robot.get_link_by_id"><code class="docutils literal notranslate"><span class="pre">Robot.get_link_by_id()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="URDFParser.Robot.html#URDFParser.Robot.Robot.get_link_by_name"><code class="docutils literal notranslate"><span class="pre">Robot.get_link_by_name()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="URDFParser.Robot.html#URDFParser.Robot.Robot.get_links_by_bfs_level"><code class="docutils literal notranslate"><span class="pre">Robot.get_links_by_bfs_level()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="URDFParser.Robot.html#URDFParser.Robot.Robot.get_links_dict_by_id"><code class="docutils literal notranslate"><span class="pre">Robot.get_links_dict_by_id()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="URDFParser.Robot.html#URDFParser.Robot.Robot.get_links_dict_by_name"><code class="docutils literal notranslate"><span class="pre">Robot.get_links_dict_by_name()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="URDFParser.Robot.html#URDFParser.Robot.Robot.get_links_ordered_by_id"><code class="docutils literal notranslate"><span class="pre">Robot.get_links_ordered_by_id()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="URDFParser.Robot.html#URDFParser.Robot.Robot.get_links_ordered_by_name"><code class="docutils literal notranslate"><span class="pre">Robot.get_links_ordered_by_name()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="URDFParser.Robot.html#URDFParser.Robot.Robot.get_max_bfs_level"><code class="docutils literal notranslate"><span class="pre">Robot.get_max_bfs_level()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="URDFParser.Robot.html#URDFParser.Robot.Robot.get_max_bfs_width"><code class="docutils literal notranslate"><span class="pre">Robot.get_max_bfs_width()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="URDFParser.Robot.html#URDFParser.Robot.Robot.get_name"><code class="docutils literal notranslate"><span class="pre">Robot.get_name()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="URDFParser.Robot.html#URDFParser.Robot.Robot.get_num_cntrl"><code class="docutils literal notranslate"><span class="pre">Robot.get_num_cntrl()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="URDFParser.Robot.html#URDFParser.Robot.Robot.get_num_joints"><code class="docutils literal notranslate"><span class="pre">Robot.get_num_joints()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="URDFParser.Robot.html#URDFParser.Robot.Robot.get_num_links"><code class="docutils literal notranslate"><span class="pre">Robot.get_num_links()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="URDFParser.Robot.html#URDFParser.Robot.Robot.get_num_links_effective"><code class="docutils literal notranslate"><span class="pre">Robot.get_num_links_effective()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="URDFParser.Robot.html#URDFParser.Robot.Robot.get_num_pos"><code class="docutils literal notranslate"><span class="pre">Robot.get_num_pos()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="URDFParser.Robot.html#URDFParser.Robot.Robot.get_num_vel"><code class="docutils literal notranslate"><span class="pre">Robot.get_num_vel()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="URDFParser.Robot.html#URDFParser.Robot.Robot.get_parent_id"><code class="docutils literal notranslate"><span class="pre">Robot.get_parent_id()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="URDFParser.Robot.html#URDFParser.Robot.Robot.get_parent_id_array"><code class="docutils literal notranslate"><span class="pre">Robot.get_parent_id_array()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="URDFParser.Robot.html#URDFParser.Robot.Robot.get_parent_ids"><code class="docutils literal notranslate"><span class="pre">Robot.get_parent_ids()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="URDFParser.Robot.html#URDFParser.Robot.Robot.get_subtree_by_id"><code class="docutils literal notranslate"><span class="pre">Robot.get_subtree_by_id()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="URDFParser.Robot.html#URDFParser.Robot.Robot.get_total_ancestor_count"><code class="docutils literal notranslate"><span class="pre">Robot.get_total_ancestor_count()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="URDFParser.Robot.html#URDFParser.Robot.Robot.get_total_subtree_count"><code class="docutils literal notranslate"><span class="pre">Robot.get_total_subtree_count()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="URDFParser.Robot.html#URDFParser.Robot.Robot.get_unique_parent_ids"><code class="docutils literal notranslate"><span class="pre">Robot.get_unique_parent_ids()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="URDFParser.Robot.html#URDFParser.Robot.Robot.has_repeated_parents"><code class="docutils literal notranslate"><span class="pre">Robot.has_repeated_parents()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="URDFParser.Robot.html#URDFParser.Robot.Robot.is_serial_chain"><code class="docutils literal notranslate"><span class="pre">Robot.is_serial_chain()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="URDFParser.Robot.html#URDFParser.Robot.Robot.next_none"><code class="docutils literal notranslate"><span class="pre">Robot.next_none()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="URDFParser.Robot.html#URDFParser.Robot.Robot.remove_joint"><code class="docutils literal notranslate"><span class="pre">Robot.remove_joint()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="URDFParser.Robot.html#URDFParser.Robot.Robot.remove_link"><code class="docutils literal notranslate"><span class="pre">Robot.remove_link()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="URDFParser.SpatialAlgebra.html">URDFParser.SpatialAlgebra</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="URDFParser.SpatialAlgebra.html#URDFParser.SpatialAlgebra.Origin"><code class="docutils literal notranslate"><span class="pre">Origin</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="URDFParser.SpatialAlgebra.html#URDFParser.SpatialAlgebra.Origin.build_fixed_transform"><code class="docutils literal notranslate"><span class="pre">Origin.build_fixed_transform()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="URDFParser.SpatialAlgebra.html#URDFParser.SpatialAlgebra.Origin.set_rotation"><code class="docutils literal notranslate"><span class="pre">Origin.set_rotation()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="URDFParser.SpatialAlgebra.html#URDFParser.SpatialAlgebra.Origin.set_translation"><code class="docutils literal notranslate"><span class="pre">Origin.set_translation()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="URDFParser.SpatialAlgebra.html#URDFParser.SpatialAlgebra.Rotation"><code class="docutils literal notranslate"><span class="pre">Rotation</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="URDFParser.SpatialAlgebra.html#URDFParser.SpatialAlgebra.Rotation.rot"><code class="docutils literal notranslate"><span class="pre">Rotation.rot()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="URDFParser.SpatialAlgebra.html#URDFParser.SpatialAlgebra.Rotation.rx"><code class="docutils literal notranslate"><span class="pre">Rotation.rx()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="URDFParser.SpatialAlgebra.html#URDFParser.SpatialAlgebra.Rotation.ry"><code class="docutils literal notranslate"><span class="pre">Rotation.ry()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="URDFParser.SpatialAlgebra.html#URDFParser.SpatialAlgebra.Rotation.rz"><code class="docutils literal notranslate"><span class="pre">Rotation.rz()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="URDFParser.SpatialAlgebra.html#URDFParser.SpatialAlgebra.Translation"><code class="docutils literal notranslate"><span class="pre">Translation</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="URDFParser.SpatialAlgebra.html#URDFParser.SpatialAlgebra.Translation.skew"><code class="docutils literal notranslate"><span class="pre">Translation.skew()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="URDFParser.SpatialAlgebra.html#URDFParser.SpatialAlgebra.Translation.xlt"><code class="docutils literal notranslate"><span class="pre">Translation.xlt()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="URDFParser.URDFParser.html">URDFParser.URDFParser</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="URDFParser.URDFParser.html#URDFParser.URDFParser.URDFParser"><code class="docutils literal notranslate"><span class="pre">URDFParser</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="URDFParser.URDFParser.html#URDFParser.URDFParser.URDFParser.bfs_order"><code class="docutils literal notranslate"><span class="pre">URDFParser.bfs_order()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="URDFParser.URDFParser.html#URDFParser.URDFParser.URDFParser.build_subtree_lists"><code class="docutils literal notranslate"><span class="pre">URDFParser.build_subtree_lists()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="URDFParser.URDFParser.html#URDFParser.URDFParser.URDFParser.dfs_order_update"><code class="docutils literal notranslate"><span class="pre">URDFParser.dfs_order_update()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="URDFParser.URDFParser.html#URDFParser.URDFParser.URDFParser.parse"><code class="docutils literal notranslate"><span class="pre">URDFParser.parse()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="URDFParser.URDFParser.html#URDFParser.URDFParser.URDFParser.parse_joints"><code class="docutils literal notranslate"><span class="pre">URDFParser.parse_joints()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="URDFParser.URDFParser.html#URDFParser.URDFParser.URDFParser.parse_links"><code class="docutils literal notranslate"><span class="pre">URDFParser.parse_links()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="URDFParser.URDFParser.html#URDFParser.URDFParser.URDFParser.print_joint_order"><code class="docutils literal notranslate"><span class="pre">URDFParser.print_joint_order()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="URDFParser.URDFParser.html#URDFParser.URDFParser.URDFParser.remove_fixed_joints"><code class="docutils literal notranslate"><span class="pre">URDFParser.remove_fixed_joints()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="URDFParser.URDFParser.html#URDFParser.URDFParser.URDFParser.renumber_linksJoints"><code class="docutils literal notranslate"><span class="pre">URDFParser.renumber_linksJoints()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="URDFParser.URDFParser.html#URDFParser.URDFParser.URDFParser.to_float"><code class="docutils literal notranslate"><span class="pre">URDFParser.to_float()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="RBDReference.RBDReference.html" class="btn btn-neutral float-left" title="RBDReference.RBDReference" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="URDFParser.InertiaSet.html" class="btn btn-neutral float-right" title="URDFParser.InertiaSet" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

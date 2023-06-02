@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>URDFParser.Joint &mdash; GRiD  documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/sphinx_highlight.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="URDFParser.Link" href="URDFParser.Link.html" />
+    <link rel="prev" title="URDFParser.InertiaSet" href="URDFParser.InertiaSet.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            GRiD
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">GRiD</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="GRiDCodeGenerator.html">GRiDCodeGenerator</a></li>
+<li class="toctree-l2"><a class="reference internal" href="RBDReference.html">RBDReference</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="URDFParser.html">URDFParser</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="URDFParser.InertiaSet.html">URDFParser.InertiaSet</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">URDFParser.Joint</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#URDFParser.Joint.Joint"><code class="docutils literal notranslate"><span class="pre">Joint</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="URDFParser.Link.html">URDFParser.Link</a></li>
+<li class="toctree-l3"><a class="reference internal" href="URDFParser.Robot.html">URDFParser.Robot</a></li>
+<li class="toctree-l3"><a class="reference internal" href="URDFParser.SpatialAlgebra.html">URDFParser.SpatialAlgebra</a></li>
+<li class="toctree-l3"><a class="reference internal" href="URDFParser.URDFParser.html">URDFParser.URDFParser</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="generateGRiD.html">generateGRiD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="printGRiD.html">printGRiD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="printReferenceValues.html">printReferenceValues</a></li>
+<li class="toctree-l2"><a class="reference internal" href="testGRiDRefactorings.html">testGRiDRefactorings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="util.html">util</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">GRiD</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="modules.html">GRiD</a></li>
+          <li class="breadcrumb-item"><a href="URDFParser.html">URDFParser</a></li>
+      <li class="breadcrumb-item active">URDFParser.Joint</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/URDFParser.Joint.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-URDFParser.Joint">
+<span id="urdfparser-joint"></span><h1>URDFParser.Joint<a class="headerlink" href="#module-URDFParser.Joint" title="Permalink to this heading"></a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="URDFParser.Joint.Joint">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">URDFParser.Joint.</span></span><span class="sig-name descname"><span class="pre">Joint</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">jid</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parent</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">child</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#URDFParser.Joint.Joint" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="URDFParser.Joint.Joint.get_bfs_id">
+<span class="sig-name descname"><span class="pre">get_bfs_id</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#URDFParser.Joint.Joint.get_bfs_id" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="URDFParser.Joint.Joint.get_bfs_level">
+<span class="sig-name descname"><span class="pre">get_bfs_level</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#URDFParser.Joint.Joint.get_bfs_level" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="URDFParser.Joint.Joint.get_child">
+<span class="sig-name descname"><span class="pre">get_child</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#URDFParser.Joint.Joint.get_child" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="URDFParser.Joint.Joint.get_damping">
+<span class="sig-name descname"><span class="pre">get_damping</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#URDFParser.Joint.Joint.get_damping" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="URDFParser.Joint.Joint.get_id">
+<span class="sig-name descname"><span class="pre">get_id</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#URDFParser.Joint.Joint.get_id" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="URDFParser.Joint.Joint.get_joint_subspace">
+<span class="sig-name descname"><span class="pre">get_joint_subspace</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#URDFParser.Joint.Joint.get_joint_subspace" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="URDFParser.Joint.Joint.get_name">
+<span class="sig-name descname"><span class="pre">get_name</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#URDFParser.Joint.Joint.get_name" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="URDFParser.Joint.Joint.get_parent">
+<span class="sig-name descname"><span class="pre">get_parent</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#URDFParser.Joint.Joint.get_parent" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="URDFParser.Joint.Joint.get_transformation_matrix">
+<span class="sig-name descname"><span class="pre">get_transformation_matrix</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#URDFParser.Joint.Joint.get_transformation_matrix" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="URDFParser.Joint.Joint.get_transformation_matrix_function">
+<span class="sig-name descname"><span class="pre">get_transformation_matrix_function</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#URDFParser.Joint.Joint.get_transformation_matrix_function" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="URDFParser.Joint.Joint.set_bfs_id">
+<span class="sig-name descname"><span class="pre">set_bfs_id</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">id_in</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#URDFParser.Joint.Joint.set_bfs_id" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="URDFParser.Joint.Joint.set_bfs_level">
+<span class="sig-name descname"><span class="pre">set_bfs_level</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">level_in</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#URDFParser.Joint.Joint.set_bfs_level" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="URDFParser.Joint.Joint.set_child">
+<span class="sig-name descname"><span class="pre">set_child</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">child_name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#URDFParser.Joint.Joint.set_child" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="URDFParser.Joint.Joint.set_damping">
+<span class="sig-name descname"><span class="pre">set_damping</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">damping</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#URDFParser.Joint.Joint.set_damping" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="URDFParser.Joint.Joint.set_id">
+<span class="sig-name descname"><span class="pre">set_id</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">id_in</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#URDFParser.Joint.Joint.set_id" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="URDFParser.Joint.Joint.set_origin_rpy">
+<span class="sig-name descname"><span class="pre">set_origin_rpy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">r</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">p</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#URDFParser.Joint.Joint.set_origin_rpy" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="URDFParser.Joint.Joint.set_origin_xyz">
+<span class="sig-name descname"><span class="pre">set_origin_xyz</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">z</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#URDFParser.Joint.Joint.set_origin_xyz" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="URDFParser.Joint.Joint.set_parent">
+<span class="sig-name descname"><span class="pre">set_parent</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">parent_name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#URDFParser.Joint.Joint.set_parent" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="URDFParser.Joint.Joint.set_transformation_matrix">
+<span class="sig-name descname"><span class="pre">set_transformation_matrix</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">matrix_in</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#URDFParser.Joint.Joint.set_transformation_matrix" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="URDFParser.Joint.Joint.set_type">
+<span class="sig-name descname"><span class="pre">set_type</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">jtype</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">axis</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#URDFParser.Joint.Joint.set_type" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="URDFParser.InertiaSet.html" class="btn btn-neutral float-left" title="URDFParser.InertiaSet" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="URDFParser.Link.html" class="btn btn-neutral float-right" title="URDFParser.Link" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

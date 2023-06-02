@@ -1,0 +1,7 @@
+folder.folder2.cat
+------------------
+
+.. automodule:: folder.folder2.cat
+   :members:
+   :undoc-members:
+   :show-inheritance:

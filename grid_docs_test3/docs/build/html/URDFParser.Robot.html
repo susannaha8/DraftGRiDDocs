@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>URDFParser.Robot &mdash; GRiD  documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/sphinx_highlight.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="URDFParser.SpatialAlgebra" href="URDFParser.SpatialAlgebra.html" />
+    <link rel="prev" title="URDFParser.Link" href="URDFParser.Link.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            GRiD
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">GRiD</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="GRiDCodeGenerator.html">GRiDCodeGenerator</a></li>
+<li class="toctree-l2"><a class="reference internal" href="RBDReference.html">RBDReference</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="URDFParser.html">URDFParser</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="URDFParser.InertiaSet.html">URDFParser.InertiaSet</a></li>
+<li class="toctree-l3"><a class="reference internal" href="URDFParser.Joint.html">URDFParser.Joint</a></li>
+<li class="toctree-l3"><a class="reference internal" href="URDFParser.Link.html">URDFParser.Link</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">URDFParser.Robot</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#URDFParser.Robot.Robot"><code class="docutils literal notranslate"><span class="pre">Robot</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="URDFParser.SpatialAlgebra.html">URDFParser.SpatialAlgebra</a></li>
+<li class="toctree-l3"><a class="reference internal" href="URDFParser.URDFParser.html">URDFParser.URDFParser</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="generateGRiD.html">generateGRiD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="printGRiD.html">printGRiD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="printReferenceValues.html">printReferenceValues</a></li>
+<li class="toctree-l2"><a class="reference internal" href="testGRiDRefactorings.html">testGRiDRefactorings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="util.html">util</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">GRiD</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="modules.html">GRiD</a></li>
+          <li class="breadcrumb-item"><a href="URDFParser.html">URDFParser</a></li>
+      <li class="breadcrumb-item active">URDFParser.Robot</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/URDFParser.Robot.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-URDFParser.Robot">
+<span id="urdfparser-robot"></span><h1>URDFParser.Robot<a class="headerlink" href="#module-URDFParser.Robot" title="Permalink to this heading"></a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="URDFParser.Robot.Robot">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">URDFParser.Robot.</span></span><span class="sig-name descname"><span class="pre">Robot</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#URDFParser.Robot.Robot" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="URDFParser.Robot.Robot.add_joint">
+<span class="sig-name descname"><span class="pre">add_joint</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">joint</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#URDFParser.Robot.Robot.add_joint" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="URDFParser.Robot.Robot.add_link">
+<span class="sig-name descname"><span class="pre">add_link</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">link</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#URDFParser.Robot.Robot.add_link" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="URDFParser.Robot.Robot.are_Ss_identical">
+<span class="sig-name descname"><span class="pre">are_Ss_identical</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">jids</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#URDFParser.Robot.Robot.are_Ss_identical" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="URDFParser.Robot.Robot.get_Imat_by_id">
+<span class="sig-name descname"><span class="pre">get_Imat_by_id</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">lid</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#URDFParser.Robot.Robot.get_Imat_by_id" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="URDFParser.Robot.Robot.get_Imat_by_name">
+<span class="sig-name descname"><span class="pre">get_Imat_by_name</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#URDFParser.Robot.Robot.get_Imat_by_name" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="URDFParser.Robot.Robot.get_Imats_by_bfs_level">
+<span class="sig-name descname"><span class="pre">get_Imats_by_bfs_level</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">level</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#URDFParser.Robot.Robot.get_Imats_by_bfs_level" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="URDFParser.Robot.Robot.get_Imats_dict_by_id">
+<span class="sig-name descname"><span class="pre">get_Imats_dict_by_id</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#URDFParser.Robot.Robot.get_Imats_dict_by_id" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="URDFParser.Robot.Robot.get_Imats_dict_by_name">
+<span class="sig-name descname"><span class="pre">get_Imats_dict_by_name</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#URDFParser.Robot.Robot.get_Imats_dict_by_name" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="URDFParser.Robot.Robot.get_Imats_ordered_by_id">
+<span class="sig-name descname"><span class="pre">get_Imats_ordered_by_id</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">reverse</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#URDFParser.Robot.Robot.get_Imats_ordered_by_id" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="URDFParser.Robot.Robot.get_Imats_ordered_by_name">
+<span class="sig-name descname"><span class="pre">get_Imats_ordered_by_name</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">reverse</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#URDFParser.Robot.Robot.get_Imats_ordered_by_name" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="URDFParser.Robot.Robot.get_S_by_bfs_level">
+<span class="sig-name descname"><span class="pre">get_S_by_bfs_level</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">level</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#URDFParser.Robot.Robot.get_S_by_bfs_level" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="URDFParser.Robot.Robot.get_S_by_id">
+<span class="sig-name descname"><span class="pre">get_S_by_id</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">jid</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#URDFParser.Robot.Robot.get_S_by_id" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="URDFParser.Robot.Robot.get_S_by_name">
+<span class="sig-name descname"><span class="pre">get_S_by_name</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#URDFParser.Robot.Robot.get_S_by_name" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="URDFParser.Robot.Robot.get_Ss_dict_by_id">
+<span class="sig-name descname"><span class="pre">get_Ss_dict_by_id</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#URDFParser.Robot.Robot.get_Ss_dict_by_id" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="URDFParser.Robot.Robot.get_Ss_dict_by_name">
+<span class="sig-name descname"><span class="pre">get_Ss_dict_by_name</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#URDFParser.Robot.Robot.get_Ss_dict_by_name" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="URDFParser.Robot.Robot.get_Ss_ordered_by_id">
+<span class="sig-name descname"><span class="pre">get_Ss_ordered_by_id</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">reverse</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#URDFParser.Robot.Robot.get_Ss_ordered_by_id" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="URDFParser.Robot.Robot.get_Ss_ordered_by_name">
+<span class="sig-name descname"><span class="pre">get_Ss_ordered_by_name</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">reverse</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#URDFParser.Robot.Robot.get_Ss_ordered_by_name" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="URDFParser.Robot.Robot.get_Xmat_Func_by_id">
+<span class="sig-name descname"><span class="pre">get_Xmat_Func_by_id</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">jid</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#URDFParser.Robot.Robot.get_Xmat_Func_by_id" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="URDFParser.Robot.Robot.get_Xmat_Func_by_name">
+<span class="sig-name descname"><span class="pre">get_Xmat_Func_by_name</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#URDFParser.Robot.Robot.get_Xmat_Func_by_name" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="URDFParser.Robot.Robot.get_Xmat_Funcs_by_bfs_level">
+<span class="sig-name descname"><span class="pre">get_Xmat_Funcs_by_bfs_level</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">level</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#URDFParser.Robot.Robot.get_Xmat_Funcs_by_bfs_level" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="URDFParser.Robot.Robot.get_Xmat_Funcs_dict_by_id">
+<span class="sig-name descname"><span class="pre">get_Xmat_Funcs_dict_by_id</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#URDFParser.Robot.Robot.get_Xmat_Funcs_dict_by_id" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="URDFParser.Robot.Robot.get_Xmat_Funcs_dict_by_name">
+<span class="sig-name descname"><span class="pre">get_Xmat_Funcs_dict_by_name</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#URDFParser.Robot.Robot.get_Xmat_Funcs_dict_by_name" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="URDFParser.Robot.Robot.get_Xmat_Funcs_ordered_by_id">
+<span class="sig-name descname"><span class="pre">get_Xmat_Funcs_ordered_by_id</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">reverse</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#URDFParser.Robot.Robot.get_Xmat_Funcs_ordered_by_id" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="URDFParser.Robot.Robot.get_Xmat_Funcs_ordered_by_name">
+<span class="sig-name descname"><span class="pre">get_Xmat_Funcs_ordered_by_name</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">reverse</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#URDFParser.Robot.Robot.get_Xmat_Funcs_ordered_by_name" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="URDFParser.Robot.Robot.get_Xmat_by_id">
+<span class="sig-name descname"><span class="pre">get_Xmat_by_id</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">jid</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#URDFParser.Robot.Robot.get_Xmat_by_id" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="URDFParser.Robot.Robot.get_Xmat_by_name">
+<span class="sig-name descname"><span class="pre">get_Xmat_by_name</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#URDFParser.Robot.Robot.get_Xmat_by_name" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="URDFParser.Robot.Robot.get_Xmats_by_bfs_level">
+<span class="sig-name descname"><span class="pre">get_Xmats_by_bfs_level</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">level</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#URDFParser.Robot.Robot.get_Xmats_by_bfs_level" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="URDFParser.Robot.Robot.get_Xmats_dict_by_id">
+<span class="sig-name descname"><span class="pre">get_Xmats_dict_by_id</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#URDFParser.Robot.Robot.get_Xmats_dict_by_id" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="URDFParser.Robot.Robot.get_Xmats_dict_by_name">
+<span class="sig-name descname"><span class="pre">get_Xmats_dict_by_name</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#URDFParser.Robot.Robot.get_Xmats_dict_by_name" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="URDFParser.Robot.Robot.get_Xmats_ordered_by_id">
+<span class="sig-name descname"><span class="pre">get_Xmats_ordered_by_id</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">reverse</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#URDFParser.Robot.Robot.get_Xmats_ordered_by_id" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="URDFParser.Robot.Robot.get_Xmats_ordered_by_name">
+<span class="sig-name descname"><span class="pre">get_Xmats_ordered_by_name</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">reverse</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#URDFParser.Robot.Robot.get_Xmats_ordered_by_name" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="URDFParser.Robot.Robot.get_ancestors_by_id">
+<span class="sig-name descname"><span class="pre">get_ancestors_by_id</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">jid</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#URDFParser.Robot.Robot.get_ancestors_by_id" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="URDFParser.Robot.Robot.get_bfs_level_by_id">
+<span class="sig-name descname"><span class="pre">get_bfs_level_by_id</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">jid</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#URDFParser.Robot.Robot.get_bfs_level_by_id" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="URDFParser.Robot.Robot.get_damping_by_id">
+<span class="sig-name descname"><span class="pre">get_damping_by_id</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">jid</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#URDFParser.Robot.Robot.get_damping_by_id" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="URDFParser.Robot.Robot.get_ids_by_bfs_level">
+<span class="sig-name descname"><span class="pre">get_ids_by_bfs_level</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">level</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#URDFParser.Robot.Robot.get_ids_by_bfs_level" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="URDFParser.Robot.Robot.get_is_ancestor_of">
+<span class="sig-name descname"><span class="pre">get_is_ancestor_of</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">jid</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">jid_of</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#URDFParser.Robot.Robot.get_is_ancestor_of" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="URDFParser.Robot.Robot.get_is_in_subtree_of">
+<span class="sig-name descname"><span class="pre">get_is_in_subtree_of</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">jid</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">jid_of</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#URDFParser.Robot.Robot.get_is_in_subtree_of" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="URDFParser.Robot.Robot.get_joint_by_id">
+<span class="sig-name descname"><span class="pre">get_joint_by_id</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">jid</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#URDFParser.Robot.Robot.get_joint_by_id" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="URDFParser.Robot.Robot.get_joint_by_name">
+<span class="sig-name descname"><span class="pre">get_joint_by_name</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#URDFParser.Robot.Robot.get_joint_by_name" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="URDFParser.Robot.Robot.get_joint_by_parent_child_name">
+<span class="sig-name descname"><span class="pre">get_joint_by_parent_child_name</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">parent_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">child_name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#URDFParser.Robot.Robot.get_joint_by_parent_child_name" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="URDFParser.Robot.Robot.get_joints_by_bfs_level">
+<span class="sig-name descname"><span class="pre">get_joints_by_bfs_level</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">level</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#URDFParser.Robot.Robot.get_joints_by_bfs_level" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="URDFParser.Robot.Robot.get_joints_by_child_name">
+<span class="sig-name descname"><span class="pre">get_joints_by_child_name</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">child_name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#URDFParser.Robot.Robot.get_joints_by_child_name" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="URDFParser.Robot.Robot.get_joints_by_parent_name">
+<span class="sig-name descname"><span class="pre">get_joints_by_parent_name</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">parent_name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#URDFParser.Robot.Robot.get_joints_by_parent_name" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="URDFParser.Robot.Robot.get_joints_dict_by_id">
+<span class="sig-name descname"><span class="pre">get_joints_dict_by_id</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#URDFParser.Robot.Robot.get_joints_dict_by_id" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="URDFParser.Robot.Robot.get_joints_dict_by_name">
+<span class="sig-name descname"><span class="pre">get_joints_dict_by_name</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#URDFParser.Robot.Robot.get_joints_dict_by_name" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="URDFParser.Robot.Robot.get_joints_ordered_by_id">
+<span class="sig-name descname"><span class="pre">get_joints_ordered_by_id</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">reverse</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#URDFParser.Robot.Robot.get_joints_ordered_by_id" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="URDFParser.Robot.Robot.get_joints_ordered_by_name">
+<span class="sig-name descname"><span class="pre">get_joints_ordered_by_name</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">reverse</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#URDFParser.Robot.Robot.get_joints_ordered_by_name" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="URDFParser.Robot.Robot.get_link_by_id">
+<span class="sig-name descname"><span class="pre">get_link_by_id</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">lid</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#URDFParser.Robot.Robot.get_link_by_id" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="URDFParser.Robot.Robot.get_link_by_name">
+<span class="sig-name descname"><span class="pre">get_link_by_name</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#URDFParser.Robot.Robot.get_link_by_name" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="URDFParser.Robot.Robot.get_links_by_bfs_level">
+<span class="sig-name descname"><span class="pre">get_links_by_bfs_level</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">level</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#URDFParser.Robot.Robot.get_links_by_bfs_level" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="URDFParser.Robot.Robot.get_links_dict_by_id">
+<span class="sig-name descname"><span class="pre">get_links_dict_by_id</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#URDFParser.Robot.Robot.get_links_dict_by_id" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="URDFParser.Robot.Robot.get_links_dict_by_name">
+<span class="sig-name descname"><span class="pre">get_links_dict_by_name</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#URDFParser.Robot.Robot.get_links_dict_by_name" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="URDFParser.Robot.Robot.get_links_ordered_by_id">
+<span class="sig-name descname"><span class="pre">get_links_ordered_by_id</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">reverse</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#URDFParser.Robot.Robot.get_links_ordered_by_id" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="URDFParser.Robot.Robot.get_links_ordered_by_name">
+<span class="sig-name descname"><span class="pre">get_links_ordered_by_name</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">reverse</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#URDFParser.Robot.Robot.get_links_ordered_by_name" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="URDFParser.Robot.Robot.get_max_bfs_level">
+<span class="sig-name descname"><span class="pre">get_max_bfs_level</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#URDFParser.Robot.Robot.get_max_bfs_level" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="URDFParser.Robot.Robot.get_max_bfs_width">
+<span class="sig-name descname"><span class="pre">get_max_bfs_width</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#URDFParser.Robot.Robot.get_max_bfs_width" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="URDFParser.Robot.Robot.get_name">
+<span class="sig-name descname"><span class="pre">get_name</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#URDFParser.Robot.Robot.get_name" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="URDFParser.Robot.Robot.get_num_cntrl">
+<span class="sig-name descname"><span class="pre">get_num_cntrl</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#URDFParser.Robot.Robot.get_num_cntrl" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="URDFParser.Robot.Robot.get_num_joints">
+<span class="sig-name descname"><span class="pre">get_num_joints</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#URDFParser.Robot.Robot.get_num_joints" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="URDFParser.Robot.Robot.get_num_links">
+<span class="sig-name descname"><span class="pre">get_num_links</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#URDFParser.Robot.Robot.get_num_links" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="URDFParser.Robot.Robot.get_num_links_effective">
+<span class="sig-name descname"><span class="pre">get_num_links_effective</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#URDFParser.Robot.Robot.get_num_links_effective" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="URDFParser.Robot.Robot.get_num_pos">
+<span class="sig-name descname"><span class="pre">get_num_pos</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#URDFParser.Robot.Robot.get_num_pos" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="URDFParser.Robot.Robot.get_num_vel">
+<span class="sig-name descname"><span class="pre">get_num_vel</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#URDFParser.Robot.Robot.get_num_vel" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="URDFParser.Robot.Robot.get_parent_id">
+<span class="sig-name descname"><span class="pre">get_parent_id</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">lid</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#URDFParser.Robot.Robot.get_parent_id" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="URDFParser.Robot.Robot.get_parent_id_array">
+<span class="sig-name descname"><span class="pre">get_parent_id_array</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#URDFParser.Robot.Robot.get_parent_id_array" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="URDFParser.Robot.Robot.get_parent_ids">
+<span class="sig-name descname"><span class="pre">get_parent_ids</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">lids</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#URDFParser.Robot.Robot.get_parent_ids" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="URDFParser.Robot.Robot.get_subtree_by_id">
+<span class="sig-name descname"><span class="pre">get_subtree_by_id</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">lid</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#URDFParser.Robot.Robot.get_subtree_by_id" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="URDFParser.Robot.Robot.get_total_ancestor_count">
+<span class="sig-name descname"><span class="pre">get_total_ancestor_count</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#URDFParser.Robot.Robot.get_total_ancestor_count" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="URDFParser.Robot.Robot.get_total_subtree_count">
+<span class="sig-name descname"><span class="pre">get_total_subtree_count</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#URDFParser.Robot.Robot.get_total_subtree_count" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="URDFParser.Robot.Robot.get_unique_parent_ids">
+<span class="sig-name descname"><span class="pre">get_unique_parent_ids</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">lids</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#URDFParser.Robot.Robot.get_unique_parent_ids" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="URDFParser.Robot.Robot.has_repeated_parents">
+<span class="sig-name descname"><span class="pre">has_repeated_parents</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">jids</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#URDFParser.Robot.Robot.has_repeated_parents" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="URDFParser.Robot.Robot.is_serial_chain">
+<span class="sig-name descname"><span class="pre">is_serial_chain</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#URDFParser.Robot.Robot.is_serial_chain" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="URDFParser.Robot.Robot.next_none">
+<span class="sig-name descname"><span class="pre">next_none</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">iterable</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#URDFParser.Robot.Robot.next_none" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="URDFParser.Robot.Robot.remove_joint">
+<span class="sig-name descname"><span class="pre">remove_joint</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">joint</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#URDFParser.Robot.Robot.remove_joint" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="URDFParser.Robot.Robot.remove_link">
+<span class="sig-name descname"><span class="pre">remove_link</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">link</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#URDFParser.Robot.Robot.remove_link" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="URDFParser.Link.html" class="btn btn-neutral float-left" title="URDFParser.Link" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="URDFParser.SpatialAlgebra.html" class="btn btn-neutral float-right" title="URDFParser.SpatialAlgebra" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

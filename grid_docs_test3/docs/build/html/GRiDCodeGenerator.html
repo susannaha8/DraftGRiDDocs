@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GRiDCodeGenerator &mdash; GRiD  documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/sphinx_highlight.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="GRiDCodeGenerator.algorithms" href="GRiDCodeGenerator.algorithms.html" />
+    <link rel="prev" title="GRiD" href="modules.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            GRiD
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">GRiD</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">GRiDCodeGenerator</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="GRiDCodeGenerator.algorithms.html">GRiDCodeGenerator.algorithms</a></li>
+<li class="toctree-l3"><a class="reference internal" href="GRiDCodeGenerator.helpers.html">GRiDCodeGenerator.helpers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="GRiDCodeGenerator.GRiDCodeGenerator.html">GRiDCodeGenerator.GRiDCodeGenerator</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="RBDReference.html">RBDReference</a></li>
+<li class="toctree-l2"><a class="reference internal" href="URDFParser.html">URDFParser</a></li>
+<li class="toctree-l2"><a class="reference internal" href="generateGRiD.html">generateGRiD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="printGRiD.html">printGRiD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="printReferenceValues.html">printReferenceValues</a></li>
+<li class="toctree-l2"><a class="reference internal" href="testGRiDRefactorings.html">testGRiDRefactorings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="util.html">util</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">GRiD</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="modules.html">GRiD</a></li>
+      <li class="breadcrumb-item active">GRiDCodeGenerator</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/GRiDCodeGenerator.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-GRiDCodeGenerator">
+<span id="gridcodegenerator"></span><h1>GRiDCodeGenerator<a class="headerlink" href="#module-GRiDCodeGenerator" title="Permalink to this heading"></a></h1>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="GRiDCodeGenerator.algorithms.html">GRiDCodeGenerator.algorithms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="GRiDCodeGenerator.helpers.html">GRiDCodeGenerator.helpers</a></li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="GRiDCodeGenerator.GRiDCodeGenerator.html">GRiDCodeGenerator.GRiDCodeGenerator</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="GRiDCodeGenerator.GRiDCodeGenerator.html#GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator"><code class="docutils literal notranslate"><span class="pre">GRiDCodeGenerator</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="GRiDCodeGenerator.GRiDCodeGenerator.html#GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.fx"><code class="docutils literal notranslate"><span class="pre">GRiDCodeGenerator.fx()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="GRiDCodeGenerator.GRiDCodeGenerator.html#GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.fxS"><code class="docutils literal notranslate"><span class="pre">GRiDCodeGenerator.fxS()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="GRiDCodeGenerator.GRiDCodeGenerator.html#GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.fxv"><code class="docutils literal notranslate"><span class="pre">GRiDCodeGenerator.fxv()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="GRiDCodeGenerator.GRiDCodeGenerator.html#GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.gen_XImats_helpers_temp_shared_memory_code"><code class="docutils literal notranslate"><span class="pre">GRiDCodeGenerator.gen_XImats_helpers_temp_shared_memory_code()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="GRiDCodeGenerator.GRiDCodeGenerator.html#GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.gen_add_code_line"><code class="docutils literal notranslate"><span class="pre">GRiDCodeGenerator.gen_add_code_line()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="GRiDCodeGenerator.GRiDCodeGenerator.html#GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.gen_add_code_lines"><code class="docutils literal notranslate"><span class="pre">GRiDCodeGenerator.gen_add_code_lines()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="GRiDCodeGenerator.GRiDCodeGenerator.html#GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.gen_add_constants_helpers"><code class="docutils literal notranslate"><span class="pre">GRiDCodeGenerator.gen_add_constants_helpers()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="GRiDCodeGenerator.GRiDCodeGenerator.html#GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.gen_add_end_control_flow"><code class="docutils literal notranslate"><span class="pre">GRiDCodeGenerator.gen_add_end_control_flow()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="GRiDCodeGenerator.GRiDCodeGenerator.html#GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.gen_add_end_function"><code class="docutils literal notranslate"><span class="pre">GRiDCodeGenerator.gen_add_end_function()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="GRiDCodeGenerator.GRiDCodeGenerator.html#GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.gen_add_func_doc"><code class="docutils literal notranslate"><span class="pre">GRiDCodeGenerator.gen_add_func_doc()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="GRiDCodeGenerator.GRiDCodeGenerator.html#GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.gen_add_gpu_err"><code class="docutils literal notranslate"><span class="pre">GRiDCodeGenerator.gen_add_gpu_err()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="GRiDCodeGenerator.GRiDCodeGenerator.html#GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.gen_add_includes"><code class="docutils literal notranslate"><span class="pre">GRiDCodeGenerator.gen_add_includes()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="GRiDCodeGenerator.GRiDCodeGenerator.html#GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.gen_add_multi_threaded_select"><code class="docutils literal notranslate"><span class="pre">GRiDCodeGenerator.gen_add_multi_threaded_select()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="GRiDCodeGenerator.GRiDCodeGenerator.html#GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.gen_add_parallel_loop"><code class="docutils literal notranslate"><span class="pre">GRiDCodeGenerator.gen_add_parallel_loop()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="GRiDCodeGenerator.GRiDCodeGenerator.html#GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.gen_add_serial_ops"><code class="docutils literal notranslate"><span class="pre">GRiDCodeGenerator.gen_add_serial_ops()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="GRiDCodeGenerator.GRiDCodeGenerator.html#GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.gen_add_sync"><code class="docutils literal notranslate"><span class="pre">GRiDCodeGenerator.gen_add_sync()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="GRiDCodeGenerator.GRiDCodeGenerator.html#GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.gen_all_code"><code class="docutils literal notranslate"><span class="pre">GRiDCodeGenerator.gen_all_code()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="GRiDCodeGenerator.GRiDCodeGenerator.html#GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.gen_direct_minv"><code class="docutils literal notranslate"><span class="pre">GRiDCodeGenerator.gen_direct_minv()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="GRiDCodeGenerator.GRiDCodeGenerator.html#GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.gen_direct_minv_device"><code class="docutils literal notranslate"><span class="pre">GRiDCodeGenerator.gen_direct_minv_device()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="GRiDCodeGenerator.GRiDCodeGenerator.html#GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.gen_direct_minv_host"><code class="docutils literal notranslate"><span class="pre">GRiDCodeGenerator.gen_direct_minv_host()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="GRiDCodeGenerator.GRiDCodeGenerator.html#GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.gen_direct_minv_inner"><code class="docutils literal notranslate"><span class="pre">GRiDCodeGenerator.gen_direct_minv_inner()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="GRiDCodeGenerator.GRiDCodeGenerator.html#GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.gen_direct_minv_inner_function_call"><code class="docutils literal notranslate"><span class="pre">GRiDCodeGenerator.gen_direct_minv_inner_function_call()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="GRiDCodeGenerator.GRiDCodeGenerator.html#GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.gen_direct_minv_inner_temp_mem_size"><code class="docutils literal notranslate"><span class="pre">GRiDCodeGenerator.gen_direct_minv_inner_temp_mem_size()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="GRiDCodeGenerator.GRiDCodeGenerator.html#GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.gen_direct_minv_kernel"><code class="docutils literal notranslate"><span class="pre">GRiDCodeGenerator.gen_direct_minv_kernel()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="GRiDCodeGenerator.GRiDCodeGenerator.html#GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.gen_forward_dynamics"><code class="docutils literal notranslate"><span class="pre">GRiDCodeGenerator.gen_forward_dynamics()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="GRiDCodeGenerator.GRiDCodeGenerator.html#GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.gen_forward_dynamics_device"><code class="docutils literal notranslate"><span class="pre">GRiDCodeGenerator.gen_forward_dynamics_device()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="GRiDCodeGenerator.GRiDCodeGenerator.html#GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.gen_forward_dynamics_finish"><code class="docutils literal notranslate"><span class="pre">GRiDCodeGenerator.gen_forward_dynamics_finish()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="GRiDCodeGenerator.GRiDCodeGenerator.html#GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.gen_forward_dynamics_finish_function_call"><code class="docutils literal notranslate"><span class="pre">GRiDCodeGenerator.gen_forward_dynamics_finish_function_call()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="GRiDCodeGenerator.GRiDCodeGenerator.html#GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.gen_forward_dynamics_gradient"><code class="docutils literal notranslate"><span class="pre">GRiDCodeGenerator.gen_forward_dynamics_gradient()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="GRiDCodeGenerator.GRiDCodeGenerator.html#GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.gen_forward_dynamics_gradient_device"><code class="docutils literal notranslate"><span class="pre">GRiDCodeGenerator.gen_forward_dynamics_gradient_device()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="GRiDCodeGenerator.GRiDCodeGenerator.html#GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.gen_forward_dynamics_gradient_host"><code class="docutils literal notranslate"><span class="pre">GRiDCodeGenerator.gen_forward_dynamics_gradient_host()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="GRiDCodeGenerator.GRiDCodeGenerator.html#GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.gen_forward_dynamics_gradient_inner_python"><code class="docutils literal notranslate"><span class="pre">GRiDCodeGenerator.gen_forward_dynamics_gradient_inner_python()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="GRiDCodeGenerator.GRiDCodeGenerator.html#GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.gen_forward_dynamics_gradient_inner_temp_mem_size"><code class="docutils literal notranslate"><span class="pre">GRiDCodeGenerator.gen_forward_dynamics_gradient_inner_temp_mem_size()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="GRiDCodeGenerator.GRiDCodeGenerator.html#GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.gen_forward_dynamics_gradient_kernel"><code class="docutils literal notranslate"><span class="pre">GRiDCodeGenerator.gen_forward_dynamics_gradient_kernel()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="GRiDCodeGenerator.GRiDCodeGenerator.html#GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.gen_forward_dynamics_gradient_kernel_max_temp_mem_size"><code class="docutils literal notranslate"><span class="pre">GRiDCodeGenerator.gen_forward_dynamics_gradient_kernel_max_temp_mem_size()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="GRiDCodeGenerator.GRiDCodeGenerator.html#GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.gen_forward_dynamics_host"><code class="docutils literal notranslate"><span class="pre">GRiDCodeGenerator.gen_forward_dynamics_host()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="GRiDCodeGenerator.GRiDCodeGenerator.html#GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.gen_forward_dynamics_inner"><code class="docutils literal notranslate"><span class="pre">GRiDCodeGenerator.gen_forward_dynamics_inner()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="GRiDCodeGenerator.GRiDCodeGenerator.html#GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.gen_forward_dynamics_inner_function_call"><code class="docutils literal notranslate"><span class="pre">GRiDCodeGenerator.gen_forward_dynamics_inner_function_call()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="GRiDCodeGenerator.GRiDCodeGenerator.html#GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.gen_forward_dynamics_inner_temp_mem_size"><code class="docutils literal notranslate"><span class="pre">GRiDCodeGenerator.gen_forward_dynamics_inner_temp_mem_size()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="GRiDCodeGenerator.GRiDCodeGenerator.html#GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.gen_forward_dynamics_kernel"><code class="docutils literal notranslate"><span class="pre">GRiDCodeGenerator.gen_forward_dynamics_kernel()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="GRiDCodeGenerator.GRiDCodeGenerator.html#GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.gen_init_XImats"><code class="docutils literal notranslate"><span class="pre">GRiDCodeGenerator.gen_init_XImats()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="GRiDCodeGenerator.GRiDCodeGenerator.html#GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.gen_init_close_grid"><code class="docutils literal notranslate"><span class="pre">GRiDCodeGenerator.gen_init_close_grid()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="GRiDCodeGenerator.GRiDCodeGenerator.html#GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.gen_init_gridData"><code class="docutils literal notranslate"><span class="pre">GRiDCodeGenerator.gen_init_gridData()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="GRiDCodeGenerator.GRiDCodeGenerator.html#GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.gen_init_robotModel"><code class="docutils literal notranslate"><span class="pre">GRiDCodeGenerator.gen_init_robotModel()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="GRiDCodeGenerator.GRiDCodeGenerator.html#GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.gen_init_topology_helpers"><code class="docutils literal notranslate"><span class="pre">GRiDCodeGenerator.gen_init_topology_helpers()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="GRiDCodeGenerator.GRiDCodeGenerator.html#GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.gen_insert_helpers_func_def_params"><code class="docutils literal notranslate"><span class="pre">GRiDCodeGenerator.gen_insert_helpers_func_def_params()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="GRiDCodeGenerator.GRiDCodeGenerator.html#GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.gen_insert_helpers_function_call"><code class="docutils literal notranslate"><span class="pre">GRiDCodeGenerator.gen_insert_helpers_function_call()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="GRiDCodeGenerator.GRiDCodeGenerator.html#GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.gen_inverse_dynamics"><code class="docutils literal notranslate"><span class="pre">GRiDCodeGenerator.gen_inverse_dynamics()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="GRiDCodeGenerator.GRiDCodeGenerator.html#GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.gen_inverse_dynamics_device"><code class="docutils literal notranslate"><span class="pre">GRiDCodeGenerator.gen_inverse_dynamics_device()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="GRiDCodeGenerator.GRiDCodeGenerator.html#GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.gen_inverse_dynamics_device_temp_mem_size"><code class="docutils literal notranslate"><span class="pre">GRiDCodeGenerator.gen_inverse_dynamics_device_temp_mem_size()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="GRiDCodeGenerator.GRiDCodeGenerator.html#GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.gen_inverse_dynamics_gradient"><code class="docutils literal notranslate"><span class="pre">GRiDCodeGenerator.gen_inverse_dynamics_gradient()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="GRiDCodeGenerator.GRiDCodeGenerator.html#GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.gen_inverse_dynamics_gradient_device"><code class="docutils literal notranslate"><span class="pre">GRiDCodeGenerator.gen_inverse_dynamics_gradient_device()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="GRiDCodeGenerator.GRiDCodeGenerator.html#GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.gen_inverse_dynamics_gradient_host"><code class="docutils literal notranslate"><span class="pre">GRiDCodeGenerator.gen_inverse_dynamics_gradient_host()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="GRiDCodeGenerator.GRiDCodeGenerator.html#GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.gen_inverse_dynamics_gradient_inner"><code class="docutils literal notranslate"><span class="pre">GRiDCodeGenerator.gen_inverse_dynamics_gradient_inner()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="GRiDCodeGenerator.GRiDCodeGenerator.html#GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.gen_inverse_dynamics_gradient_inner_function_call"><code class="docutils literal notranslate"><span class="pre">GRiDCodeGenerator.gen_inverse_dynamics_gradient_inner_function_call()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="GRiDCodeGenerator.GRiDCodeGenerator.html#GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.gen_inverse_dynamics_gradient_inner_temp_mem_size"><code class="docutils literal notranslate"><span class="pre">GRiDCodeGenerator.gen_inverse_dynamics_gradient_inner_temp_mem_size()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="GRiDCodeGenerator.GRiDCodeGenerator.html#GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.gen_inverse_dynamics_gradient_kernel"><code class="docutils literal notranslate"><span class="pre">GRiDCodeGenerator.gen_inverse_dynamics_gradient_kernel()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="GRiDCodeGenerator.GRiDCodeGenerator.html#GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.gen_inverse_dynamics_gradient_kernel_max_temp_mem_size"><code class="docutils literal notranslate"><span class="pre">GRiDCodeGenerator.gen_inverse_dynamics_gradient_kernel_max_temp_mem_size()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="GRiDCodeGenerator.GRiDCodeGenerator.html#GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.gen_inverse_dynamics_host"><code class="docutils literal notranslate"><span class="pre">GRiDCodeGenerator.gen_inverse_dynamics_host()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="GRiDCodeGenerator.GRiDCodeGenerator.html#GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.gen_inverse_dynamics_inner"><code class="docutils literal notranslate"><span class="pre">GRiDCodeGenerator.gen_inverse_dynamics_inner()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="GRiDCodeGenerator.GRiDCodeGenerator.html#GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.gen_inverse_dynamics_inner_function_call"><code class="docutils literal notranslate"><span class="pre">GRiDCodeGenerator.gen_inverse_dynamics_inner_function_call()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="GRiDCodeGenerator.GRiDCodeGenerator.html#GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.gen_inverse_dynamics_inner_temp_mem_size"><code class="docutils literal notranslate"><span class="pre">GRiDCodeGenerator.gen_inverse_dynamics_inner_temp_mem_size()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="GRiDCodeGenerator.GRiDCodeGenerator.html#GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.gen_inverse_dynamics_kernel"><code class="docutils literal notranslate"><span class="pre">GRiDCodeGenerator.gen_inverse_dynamics_kernel()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="GRiDCodeGenerator.GRiDCodeGenerator.html#GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.gen_kernel_load_inputs"><code class="docutils literal notranslate"><span class="pre">GRiDCodeGenerator.gen_kernel_load_inputs()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="GRiDCodeGenerator.GRiDCodeGenerator.html#GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.gen_kernel_load_inputs_single_timing"><code class="docutils literal notranslate"><span class="pre">GRiDCodeGenerator.gen_kernel_load_inputs_single_timing()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="GRiDCodeGenerator.GRiDCodeGenerator.html#GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.gen_kernel_save_result"><code class="docutils literal notranslate"><span class="pre">GRiDCodeGenerator.gen_kernel_save_result()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="GRiDCodeGenerator.GRiDCodeGenerator.html#GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.gen_kernel_save_result_single_timing"><code class="docutils literal notranslate"><span class="pre">GRiDCodeGenerator.gen_kernel_save_result_single_timing()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="GRiDCodeGenerator.GRiDCodeGenerator.html#GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.gen_load_update_XImats_helpers"><code class="docutils literal notranslate"><span class="pre">GRiDCodeGenerator.gen_load_update_XImats_helpers()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="GRiDCodeGenerator.GRiDCodeGenerator.html#GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.gen_load_update_XImats_helpers_function_call"><code class="docutils literal notranslate"><span class="pre">GRiDCodeGenerator.gen_load_update_XImats_helpers_function_call()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="GRiDCodeGenerator.GRiDCodeGenerator.html#GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.gen_load_update_XImats_helpers_temp_mem_size"><code class="docutils literal notranslate"><span class="pre">GRiDCodeGenerator.gen_load_update_XImats_helpers_temp_mem_size()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="GRiDCodeGenerator.GRiDCodeGenerator.html#GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.gen_mx_func_call_for_cpp"><code class="docutils literal notranslate"><span class="pre">GRiDCodeGenerator.gen_mx_func_call_for_cpp()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="GRiDCodeGenerator.GRiDCodeGenerator.html#GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.gen_spatial_algebra_helpers"><code class="docutils literal notranslate"><span class="pre">GRiDCodeGenerator.gen_spatial_algebra_helpers()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="GRiDCodeGenerator.GRiDCodeGenerator.html#GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.gen_static_array_ind_2d"><code class="docutils literal notranslate"><span class="pre">GRiDCodeGenerator.gen_static_array_ind_2d()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="GRiDCodeGenerator.GRiDCodeGenerator.html#GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.gen_static_array_ind_3d"><code class="docutils literal notranslate"><span class="pre">GRiDCodeGenerator.gen_static_array_ind_3d()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="GRiDCodeGenerator.GRiDCodeGenerator.html#GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.gen_topology_helpers_pointers_for_cpp"><code class="docutils literal notranslate"><span class="pre">GRiDCodeGenerator.gen_topology_helpers_pointers_for_cpp()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="GRiDCodeGenerator.GRiDCodeGenerator.html#GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.gen_topology_helpers_size"><code class="docutils literal notranslate"><span class="pre">GRiDCodeGenerator.gen_topology_helpers_size()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="GRiDCodeGenerator.GRiDCodeGenerator.html#GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.gen_topology_sparsity_helpers_python"><code class="docutils literal notranslate"><span class="pre">GRiDCodeGenerator.gen_topology_sparsity_helpers_python()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="GRiDCodeGenerator.GRiDCodeGenerator.html#GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.gen_var_in_list"><code class="docutils literal notranslate"><span class="pre">GRiDCodeGenerator.gen_var_in_list()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="GRiDCodeGenerator.GRiDCodeGenerator.html#GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.gen_var_not_in_list"><code class="docutils literal notranslate"><span class="pre">GRiDCodeGenerator.gen_var_not_in_list()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="GRiDCodeGenerator.GRiDCodeGenerator.html#GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.mx"><code class="docutils literal notranslate"><span class="pre">GRiDCodeGenerator.mx()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="GRiDCodeGenerator.GRiDCodeGenerator.html#GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.mx0"><code class="docutils literal notranslate"><span class="pre">GRiDCodeGenerator.mx0()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="GRiDCodeGenerator.GRiDCodeGenerator.html#GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.mx1"><code class="docutils literal notranslate"><span class="pre">GRiDCodeGenerator.mx1()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="GRiDCodeGenerator.GRiDCodeGenerator.html#GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.mx2"><code class="docutils literal notranslate"><span class="pre">GRiDCodeGenerator.mx2()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="GRiDCodeGenerator.GRiDCodeGenerator.html#GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.mx3"><code class="docutils literal notranslate"><span class="pre">GRiDCodeGenerator.mx3()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="GRiDCodeGenerator.GRiDCodeGenerator.html#GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.mx4"><code class="docutils literal notranslate"><span class="pre">GRiDCodeGenerator.mx4()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="GRiDCodeGenerator.GRiDCodeGenerator.html#GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.mx5"><code class="docutils literal notranslate"><span class="pre">GRiDCodeGenerator.mx5()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="GRiDCodeGenerator.GRiDCodeGenerator.html#GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.mxS"><code class="docutils literal notranslate"><span class="pre">GRiDCodeGenerator.mxS()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="GRiDCodeGenerator.GRiDCodeGenerator.html#GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.mxv"><code class="docutils literal notranslate"><span class="pre">GRiDCodeGenerator.mxv()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="GRiDCodeGenerator.GRiDCodeGenerator.html#GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.test_densify_Minv"><code class="docutils literal notranslate"><span class="pre">GRiDCodeGenerator.test_densify_Minv()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="GRiDCodeGenerator.GRiDCodeGenerator.html#GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.test_fd_grad"><code class="docutils literal notranslate"><span class="pre">GRiDCodeGenerator.test_fd_grad()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="GRiDCodeGenerator.GRiDCodeGenerator.html#GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.test_minv"><code class="docutils literal notranslate"><span class="pre">GRiDCodeGenerator.test_minv()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="GRiDCodeGenerator.GRiDCodeGenerator.html#GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.test_minv_bpass"><code class="docutils literal notranslate"><span class="pre">GRiDCodeGenerator.test_minv_bpass()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="GRiDCodeGenerator.GRiDCodeGenerator.html#GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.test_minv_fpass"><code class="docutils literal notranslate"><span class="pre">GRiDCodeGenerator.test_minv_fpass()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="GRiDCodeGenerator.GRiDCodeGenerator.html#GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.test_rnea"><code class="docutils literal notranslate"><span class="pre">GRiDCodeGenerator.test_rnea()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="GRiDCodeGenerator.GRiDCodeGenerator.html#GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.test_rnea_bpass"><code class="docutils literal notranslate"><span class="pre">GRiDCodeGenerator.test_rnea_bpass()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="GRiDCodeGenerator.GRiDCodeGenerator.html#GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.test_rnea_fpass"><code class="docutils literal notranslate"><span class="pre">GRiDCodeGenerator.test_rnea_fpass()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="GRiDCodeGenerator.GRiDCodeGenerator.html#GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.test_rnea_grad"><code class="docutils literal notranslate"><span class="pre">GRiDCodeGenerator.test_rnea_grad()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="GRiDCodeGenerator.GRiDCodeGenerator.html#GRiDCodeGenerator.GRiDCodeGenerator.GRiDCodeGenerator.test_rnea_grad_inner"><code class="docutils literal notranslate"><span class="pre">GRiDCodeGenerator.test_rnea_grad_inner()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="modules.html" class="btn btn-neutral float-left" title="GRiD" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="GRiDCodeGenerator.algorithms.html" class="btn btn-neutral float-right" title="GRiDCodeGenerator.algorithms" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
