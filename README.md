@@ -64,7 +64,7 @@ Use `$python3 -m site` to find where python's site-packages are on your computer
 Now that you have set up your project, you can run the command that will generate the .rst files. Inside your documentation folder (ex. `/docs`), run 
 `$ sphinx-apidoc -f -M --separate -t=./source/_templates  -o ./source ../GRiD`. The last argument-- `../GRiD`-- is the path to your project, so adjust it accordingly. `-f` forces through the changes if the .rst files already exist, and the `-M` flag puts the module itself first instead of it's contents.
 
-After running this command, a ton of .rst files show up in your `\docs\source` folder. Make any modifications to the .rst files manually.
+After running this command, a ton of .rst files show up in your `/docs/source` folder. Make any modifications to the .rst files manually.
 
 Finally, run `$ make html` to build the webpages for your documention. To view your documentation, get the full path of the `index.html` file and put it into the search bar of your internet browser. It might look something like this:
 
