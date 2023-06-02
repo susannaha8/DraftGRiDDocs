@@ -31,7 +31,7 @@ Set the project name and other information, and select `y` for build and source 
 ### Install Themes, Set Project Path, and Modify `index.rst`
 
 #### Themes
-Sphinx has a variety of themes (https://sphinx-themes.org/). To use the "ReadTheDocs" theme, run the command `$ pip install sphinx-rtd-theme`. Open the `conf.py` file and set the html theme: `html_theme = 'sphinx_rtd_theme'`. You can do this for any other theme.
+Sphinx has a variety of themes (https://sphinx-themes.org/). To use the "ReadTheDocs" theme, run the command `$ pip install sphinx-rtd-theme`. Open the `/docs/source/conf.py` file and set the html theme: `html_theme = 'sphinx_rtd_theme'`. You can do this for any other theme.
 
 #### Path
 To set the path to your code base, add the following lines to the top of your `conf.py` file:
@@ -49,7 +49,7 @@ In `conf.py`, make sure that  `extensions = ['sphinx.ext.autodoc']`
 
 #### index.rst
 
-Since GRiD is made up of multiple files and folders, after the line `:caption: Contents:`, on a new line, add the word `modules`. This makes sure that Sphinx creates a modules.rst file and includes all the folders and files in the codebase. 
+Since GRiD is made up of multiple files and folders, after the line `:caption: Contents:`, in /docs/source/index.rst, on a new line, add the word `modules`. This makes sure that Sphinx creates a modules.rst file and includes all the folders and files in the codebase. 
 
 <img src="/modules.png" alt="index.rst file after edits" style="height: 300px;"/>
 
