@@ -68,7 +68,7 @@ After running this command, a ton of .rst files show up in your `/docs/source` f
 
 Finally, run `$ make html` to build the webpages for your documention. To view your documentation, get the full path of the `index.html` file and put it into the search bar of your internet browser. It might look something like this:
 
-<img src="/example.png" alt="GRiD draft table of contents" style="height: 100px;"/>
+<img src="/example.png" alt="GRiD draft table of contents" style="height: 300px;"/>
 
 ## Current GRiD Specific Issues
 
@@ -83,7 +83,7 @@ After you have written all of your functions, after the function template and be
 
 Visual Studio code has a great extension called autoDocString. After you install this, when you go to add a triple quote comment after the function description, you will see the following:
 
-<img src="/docstring.png" alt="image of docstring being generated" style="height: 300px;"/>
+<img src="/docstring.png" alt="image of docstring being generated" style="height: 100px;"/>
 
 once you press enter, the formated template will appear. You fill in your description, and sphinx will add it to the documentation when you run `$make html`. 
 
