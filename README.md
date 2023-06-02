@@ -68,7 +68,7 @@ After running this command, a ton of .rst files show up in your `/docs/source` f
 
 Finally, run `$ make html` to build the webpages for your documention. To view your documentation, get the full path of the `index.html` file and put it into the search bar of your internet browser. It might look something like this:
 
-<img src="/example.png" alt="GRiD draft table of contents" style="height: 300px;"/>
+<img src="/example.png" alt="GRiD draft table of contents" style="height: 100px;"/>
 
 ## Current GRiD Specific Issues
 
