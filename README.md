@@ -47,7 +47,7 @@ If you put your project folder somewhere different than in the example, adjust t
 
 In `conf.py`, make sure that  `extensions = ['sphinx.ext.autodoc']`
 
-#### `index.rst`
+#### index.rst
 
 Since GRiD is made up of multiple files and folders, after the line `:caption: Contents:`, on a new line, add the word `modules`. This makes sure that Sphinx creates a modules.rst file and includes all the folders and files in the codebase. 
 
