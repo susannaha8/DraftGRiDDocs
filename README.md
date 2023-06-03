@@ -1,3 +1,5 @@
+Added: while I work on the full autodocs, this is a website for the actual in-progress content of the GRiD API Reference: https://susannaha8.github.io/grid_less/index.html and the github repository associated with it: https://github.com/susannaha8/grid_less. I am pretty sure that I have set it up so that all changes deploy automatically, but see the .py files for the most updated comments on each function. 
+
 # Generating Python Documentation with Sphinx
 
 Sphinx is software that autogenerates documentation for a python codebase based on the strings inside the files. I created a draft of Sphinx documentation for GRiD inside this repository (in the folder `/grid_draft_docs3`). To replicate what was done for this first draft of GRiD docs, follow along below. To add to my draft with function/class descriptions, Use the existing .rst files in this repository and skip to "Writing Docstrings". 
